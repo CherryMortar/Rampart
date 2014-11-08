@@ -2,7 +2,7 @@
 using Pathfinding;
 using System.Collections;
 
-public abstract class UnitController : AIController {
+public class UnitController : AIController {
 
     protected const float WAYPOINT_MIN_DISTANCE = 0.2f;
 

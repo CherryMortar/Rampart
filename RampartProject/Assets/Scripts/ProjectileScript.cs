@@ -14,18 +14,25 @@ public class ProjectileScript : MonoBehaviour
 
     void Update()
     {
+        if (targetObject == null)
+            tracking = false;
+
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
         if (tracking)
         {
             transform.LookAt(targetObject.transform);
+            targetPosition = targetObject.transform.position;
+        }
+        else
+        {
+            transform.LookAt(targetPosition);
         }
 
         passedRange += Time.deltaTime * speed;
         if (passedRange > maxRange)
         {
             Explode();
-            Debug.Log("self destroyed");
         }
     }
 
@@ -40,6 +47,10 @@ public class ProjectileScript : MonoBehaviour
         {         
             UnitProperties props = other.gameObject.GetComponent<UnitProperties>();
             props.TakeDamage(damage);
+            Explode();
+        }
+        else if (other.gameObject.CompareTag("Terrain"))
+        {
             Explode();
         }
     }
