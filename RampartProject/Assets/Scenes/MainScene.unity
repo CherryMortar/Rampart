@@ -224,6 +224,7 @@ GameObject:
   - 114: {fileID: 978774930}
   - 114: {fileID: 978774931}
   - 114: {fileID: 978774929}
+  - 114: {fileID: 978774933}
   - 114: {fileID: 978774932}
   m_Layer: 0
   m_Name: MainObject
@@ -356,16 +357,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonWidth: 200
-  buttonHeight: 20
-  fontSize: 0
-  background: {fileID: 0}
+  buttonHeight: 50
+  fontSize: 40
+  background: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff, type: 3}
   towerPrefabs:
   - {fileID: 100000, guid: fd801b90ccc7b58439a04e64f45def87, type: 2}
   - {fileID: 100004, guid: 7ff82a58fa12eb041933caffea1af4b7, type: 2}
   - {fileID: 100004, guid: f3ef69919b42f834a892ae1f744f20f0, type: 2}
-  - {fileID: 100000, guid: 6a9988adf3357f242be9ec3f198327d7, type: 2}
-  - {fileID: 100004, guid: 6f65bbb7af3abe548a89236697278fd4, type: 2}
-  - {fileID: 100004, guid: b9f6b356ee152484aae802dc4f531e49, type: 2}
 --- !u!114 &978774932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +372,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 978774925}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667bcd4e7a7f40d4e942256375bc192d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logo: {fileID: 2800000, guid: 2171915a3181d4e41bd8dc3aeb6d8335, type: 3}
+  font: {fileID: 12800000, guid: 00858b5435e4bea48ade4bb3cb17f9d0, type: 3}
+  fontSize: 80
+  paddingTop: 240
+--- !u!114 &978774933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978774925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf8275fb02e90e47b278f606e4c1c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Script: {fileID: 11500000, guid: 281815d06f91a9c41bd9c5972e44efc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

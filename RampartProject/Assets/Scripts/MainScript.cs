@@ -18,7 +18,8 @@ public class MainScript : MonoBehaviour
         pathfindingManager.Initialize();
 
         playField = playFieldSpawner.GenerateJagtangularPlayField();
-        pathfindingManager.InitGraph();  
+        pathfindingManager.InitGraph();
+
         buildScript.Initialize(this);
         terrainGenerator.Initialize(this);
 
