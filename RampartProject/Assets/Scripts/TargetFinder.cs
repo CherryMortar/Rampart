@@ -19,52 +19,39 @@ public class TargetFinder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.CompareTag(ENEMY_TAG))
+        if (currentTarget != null)
         {
-            GameObject closestHero = FindNearestWithTag(ENEMY_TAG);
-            GameObject closestBuilding = FindNearestWithTag(BUILDING_TAG);
-
-            if (closestHero == null)
-            {
-                currentTarget = closestBuilding;
-            }
-            else
-            {
-                if (currentTarget != null)
-                {
-                    if (GetDistance(this.gameObject, currentTarget) > sightRange)
-                        currentTarget = null;
-                }
-
-                if (currentTarget == null)
-                {
-                    if (GetDistance(this.gameObject, closestHero) <= sightRange)
-                        currentTarget = closestHero;
-                    else
-                        currentTarget = closestBuilding;
-                }
-            }
-        }
-        else if (this.CompareTag(HERO_TAG))
-        {
-            GameObject closestEnemy = FindNearestWithTag(ENEMY_TAG);
-
-            if(closestEnemy == null)
-            {
+            if (GetDistance(this.gameObject, currentTarget) > sightRange)
                 currentTarget = null;
-            }
-            else 
-            {
-                if(currentTarget != null) 
-                {
-                    if(Vector3.Distance(currentTarget.transform.position, this.transform.position) > sightRange)
-                        currentTarget = null;
-                }
+        }
 
-                if (currentTarget == null)
+        if (currentTarget == null)
+        {
+            if (this.CompareTag(ENEMY_TAG))
+            {
+                GameObject closestHero = FindNearestWithTag(ENEMY_TAG);
+                GameObject closestBuilding = FindNearestWithTag(BUILDING_TAG);
+
+                if (closestHero == null || GetDistance(this.gameObject, closestHero) > sightRange)
                 {
-                    if(Vector3.Distance(closestEnemy.transform.position, this.transform.position) <= sightRange)
-                        currentTarget = closestEnemy;
+                    currentTarget = closestBuilding;
+                }
+                else
+                {
+                    currentTarget = closestHero;
+                }
+            }
+            else if (this.CompareTag(HERO_TAG))
+            {
+                GameObject closestEnemy = FindNearestWithTag(ENEMY_TAG);
+
+                if (closestEnemy == null || GetDistance(this.gameObject, closestEnemy) > sightRange)
+                {
+                    currentTarget = null;
+                }
+                else
+                {
+                    currentTarget = closestEnemy;
                 }
             }
         }
