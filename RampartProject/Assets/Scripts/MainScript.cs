@@ -17,7 +17,8 @@ public class MainScript : MonoBehaviour
         pathfindingManager.Initialize();
 
         playField = playFieldSpawner.GenerateJagtangularPlayField();
-        pathfindingManager.InitGraph();  
+        pathfindingManager.InitGraph();
+
         buildScript.Initialize(this);
         for (int i = 0; i < playField.Count; i++)
         {
