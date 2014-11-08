@@ -139,10 +139,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonWidth: 200
   buttonHeight: 20
+  fontSize: 0
+  background: {fileID: 0}
   towerPrefabs:
   - {fileID: 100000, guid: fd801b90ccc7b58439a04e64f45def87, type: 2}
   - {fileID: 100004, guid: 7ff82a58fa12eb041933caffea1af4b7, type: 2}
   - {fileID: 100004, guid: f3ef69919b42f834a892ae1f744f20f0, type: 2}
+  - {fileID: 100000, guid: 6a9988adf3357f242be9ec3f198327d7, type: 2}
+  - {fileID: 100004, guid: 6f65bbb7af3abe548a89236697278fd4, type: 2}
+  - {fileID: 100004, guid: b9f6b356ee152484aae802dc4f531e49, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   targetObject: {fileID: 0}
-  speed: 20
+  speed: 35
   damage: 0
   maxRange: Infinity
   tracking: 1
