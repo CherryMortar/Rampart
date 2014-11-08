@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-class MainScript : MonoBehaviour
+public class MainScript : MonoBehaviour
 {
-    protected List<GameObject> playField;
+    public List<GameObject> playField;
     public PlayFieldSpawner playFieldSpawner;
     public PathfindingManager pathfindingManager;
+    public BuildScript buildScript;
 
     // Use this for initialization
     void Start()
@@ -16,8 +17,8 @@ class MainScript : MonoBehaviour
         pathfindingManager.Initialize();
 
         playField = playFieldSpawner.GenerateJagtangularPlayField();
-        pathfindingManager.InitGraph();
-
+        pathfindingManager.InitGraph();  
+        buildScript.Initialize(this);
         for (int i = 0; i < playField.Count; i++)
         {
             if(!playField[i].activeSelf)
