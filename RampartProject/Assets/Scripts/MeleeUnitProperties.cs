@@ -3,11 +3,7 @@ using System.Collections;
 
 public class MeleeUnitProperties : UnitProperties
 {
-    public void Update()
-    {
-        Attack();
-    }
-
+    
     public override void Attack()
     {
         UnitProperties enemyProp = currentTarget.GetComponent<UnitProperties>();
@@ -16,7 +12,7 @@ public class MeleeUnitProperties : UnitProperties
         {
             //Animation
             enemyProp.health = enemyProp.health  - attack;
-            Debug.Log(enemyProp.health);
+            //Debug.Log(enemyProp.health);
             enemyProp.CheckIsDead();
             lastAttackTime = Time.time;
         }

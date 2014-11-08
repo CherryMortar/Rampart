@@ -8,20 +8,19 @@ public class RangeUnitProperties : UnitProperties {
 
     public override void Attack()
     {
-        if (currentTarget && Time.frameCount % 10 == 0)
+        if (currentTarget && lastAttackTime + reloadAttackTime < Time.time)
         {
-            GameObject rocket = (GameObject)Instantiate(missile);
-            rocket.transform.position = holePosition.position;
-            rocket.transform.rotation = holePosition.rotation;
-            // SelfGuidedMissile rocketScript = rocket.GetComponent<SelfGuidedMissile>();
-            //rocketScript.myTarget = target.transform;
+            Debug.Log("in");
+            FireProjectile();            
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FireProjectile()
     {
-
-        
+        GameObject rocket = (GameObject)Instantiate(missile,holePosition.position,holePosition.rotation);
+        SelfGuidedMissile rocketScript = rocket.GetComponent<SelfGuidedMissile>();
+        rocketScript.myTarget = currentTarget.transform;
+        rocketScript.myDmg = attack;
+        lastAttackTime = Time.time;
     }
 }
