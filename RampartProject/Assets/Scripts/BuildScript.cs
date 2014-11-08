@@ -6,11 +6,16 @@ public class BuildScript : MonoBehaviour {
 
 	public int buttonWidth;
 	public int buttonHeight;
+
 	private List<GameObject> towers;
 	private List<GameObject> playField;
+
 	private GameObject inHand;
+
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
+
+    float posY = 5;
 
 	// Use this for initialization
 	void Start()
@@ -22,7 +27,7 @@ public class BuildScript : MonoBehaviour {
 		this.mainScript = mainScript;
 		playField = mainScript.playField;
 		playFieldSpawner = mainScript.playFieldSpawner;
-		towers = LoadTowersFromResources ();
+		towers = LoadTowersFromResources();
 	}
 
 	void GetTowerInHand (int index)
@@ -48,11 +53,14 @@ public class BuildScript : MonoBehaviour {
 		}
 	}
 
-	void PlaceTower (float posY)
+	void PlaceTower (Vector2 tile)
 	{
-		Vector2 tile = playFieldSpawner.GetTileBelowPoint (inHand.transform.position);
-		Debug.Log (tile.x + " " + tile.y);
-		inHand.transform.position = new Vector3 (tile.x * playFieldSpawner.tileSize.x + playFieldSpawner.tileSize.x / 2, posY, tile.y * playFieldSpawner.tileSize.y + playFieldSpawner.tileSize.y / 2);
+        Vector3 pos = playFieldSpawner.GetTileCenter(tile);
+        pos.y = posY;
+
+        Instantiate(inHand, pos, Quaternion.identity);
+        Destroy(inHand);
+
 		inHand = null;
 	}
 
@@ -60,15 +68,15 @@ public class BuildScript : MonoBehaviour {
 	{
 		if(inHand != null)
 		{
-			float posY = inHand.transform.localScale.y / 2;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			float distance = ray.origin.y / (-ray.direction.y);
 			Vector3 point = ray.GetPoint (distance);
 			Vector3 snapPosition = new Vector3 (point.x, posY, point.z);
 			inHand.transform.position = snapPosition;
+
 			if(Input.GetMouseButtonDown(0))
 			{
-				PlaceTower (posY);
+				PlaceTower(playFieldSpawner.GetTileBelowPoint(snapPosition));
 			}
 		}
 	}

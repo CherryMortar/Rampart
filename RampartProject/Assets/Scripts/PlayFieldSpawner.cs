@@ -64,7 +64,7 @@ public class PlayFieldSpawner : MonoBehaviour
 
     public Vector2 GetTileBelowPoint(Vector3 pt)
     {
-        return new Vector2(Mathf.Round(pt.x / tileSize.x), Mathf.Round(pt.z / tileSize.y));
+        return new Vector2((int)pt.x / (int)tileSize.x, (int)pt.z / (int)tileSize.y);
     }
 
     public Vector3 GetTileCenter(Vector2 tile)
