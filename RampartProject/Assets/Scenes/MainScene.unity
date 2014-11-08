@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   astarData:
     hasBeenReverted: 0
-    data: 504b03041400000808002b836845cc7cc5e53f00000048000000090024006d6574612e6a736f6e0a0020000000000001001800d71cffd45ffbcf01d71cffd45ffbcf01d71cffd45ffbcf01ab562a4b2d2acecccf53b25232d633d53352d2514a2f4a2cc82856b23200324b335380ace8581da592ca8254bfc4dc5428372f3f25d539bf34af04ccaf0500504b01022d001400000808002b836845cc7cc5e53f000000480000000900240000000000000000000000000000006d6574612e6a736f6e0a0020000000000001001800d71cffd45ffbcf01d71cffd45ffbcf01d71cffd45ffbcf01504b050600000000010001005b0000008a0000000000
+    data: 504b0304140000080800e1896845cc7cc5e53f00000048000000090024006d6574612e6a736f6e0a0020000000000001001800f2ca1bc566fbcf01f2ca1bc566fbcf01f2ca1bc566fbcf01ab562a4b2d2acecccf53b25232d633d53352d2514a2f4a2cc82856b23200324b335380ace8581da592ca8254bfc4dc5428372f3f25d539bf34af04ccaf0500504b01022d00140000080800e1896845cc7cc5e53f000000480000000900240000000000000000000000000000006d6574612e6a736f6e0a0020000000000001001800f2ca1bc566fbcf01f2ca1bc566fbcf01f2ca1bc566fbcf01504b050600000000010001005b0000008a0000000000
     data_backup: 
     data_cachedStartup: 
     revertData: 
@@ -350,3 +350,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonWidth: 200
   buttonHeight: 20
+  towerPrefabs:
+  - {fileID: 100000, guid: fd801b90ccc7b58439a04e64f45def87, type: 2}
+  - {fileID: 100004, guid: 7ff82a58fa12eb041933caffea1af4b7, type: 2}
+  - {fileID: 100004, guid: f3ef69919b42f834a892ae1f744f20f0, type: 2}
+--- !u!1 &1165947979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1165947981}
+  - 108: {fileID: 1165947980}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1165947980
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165947979}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: .5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &1165947981
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165947979}
+  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381661, w: .875426114}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3

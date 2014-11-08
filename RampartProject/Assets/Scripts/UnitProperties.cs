@@ -1,25 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnitProperties : MonoBehaviour
+public abstract class UnitProperties : MonoBehaviour
 {
 	public int health;
 	public int attack;
-	public int attackRange;
-	//private bool dead;
-	public int sightRange;
+	public float attackRange;
+	public float sightRange;
 	public float reloadAttackTime;
     public float moveSpeed;
+
 	public GameObject currentTarget;
+
 	Animator animator;
 
     protected float lastAttackTime;
 
-	public virtual void Attack()
+	public virtual void Attack(GameObject target)
 	{
-		//Play Attack Animation
-		Debug.Log("Attack in parrent");
+		Debug.Log("Virtual attack called");
 	}
+
+    public void TakeDamage(int damage)
+    {
+        this.health -= damage;
+        CheckIsDead();
+    }
 
 	public void CheckIsDead()
 	{

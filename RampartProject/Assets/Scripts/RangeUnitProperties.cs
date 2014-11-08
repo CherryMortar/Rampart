@@ -3,24 +3,20 @@ using System.Collections;
 
 public class RangeUnitProperties : UnitProperties {
 
-    public GameObject missile;
-    public Transform holePosition;
+    public GameObject projectile;
+    public Vector3 firePosition;
 
-    public override void Attack()
+    public override void Attack(GameObject target)
     {
-        if (currentTarget && lastAttackTime + reloadAttackTime < Time.time)
-        {
-            Debug.Log("in");
-            FireProjectile();            
-        }
+        FireProjectile(target);            
     }
 
-    private void FireProjectile()
+    private void FireProjectile(GameObject target)
     {
-        GameObject rocket = (GameObject)Instantiate(missile,holePosition.position,holePosition.rotation);
-        SelfGuidedMissile rocketScript = rocket.GetComponent<SelfGuidedMissile>();
-        rocketScript.myTarget = currentTarget.transform;
-        rocketScript.myDmg = attack;
-        lastAttackTime = Time.time;
+        GameObject projectileInstance = (GameObject)Instantiate(projectile, firePosition, Quaternion.identity);
+        ProjectileScript projectileScript = projectileInstance.GetComponent<ProjectileScript>();
+
+        projectileScript.targetObject = target;
+        projectileScript.damage = this.attack;
     }
 }

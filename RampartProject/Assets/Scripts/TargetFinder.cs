@@ -10,18 +10,20 @@ public class TargetFinder : MonoBehaviour
     private const string CITADEL_TAG = "Citadel";
     private GameObject currentTarget = null;
 
+    public bool chaseTarget = true;
+
     public GameObject CurrentTarget
     {
         get { return currentTarget; }
     }
 
-    public bool FindTarget(float sightRange)
+    public bool FindTarget(float sightRange, float attackRange)
     {
         GameObject prevTarget = currentTarget;
 
         if (currentTarget != null)
         {
-            if (GetDistance(this.gameObject, currentTarget) > sightRange)
+            if (GetDistance(this.gameObject, currentTarget) > (chaseTarget ? sightRange : attackRange))
                 currentTarget = null;
         }
 
@@ -42,6 +44,19 @@ public class TargetFinder : MonoBehaviour
                 }
             }
             else if (this.CompareTag(HERO_TAG))
+            {
+                GameObject closestEnemy = FindNearestWithTag(ENEMY_TAG);
+
+                if (closestEnemy == null || GetDistance(this.gameObject, closestEnemy) > sightRange)
+                {
+                    currentTarget = null;
+                }
+                else
+                {
+                    currentTarget = closestEnemy;
+                }
+            }
+            else if (this.CompareTag(BUILDING_TAG))
             {
                 GameObject closestEnemy = FindNearestWithTag(ENEMY_TAG);
 

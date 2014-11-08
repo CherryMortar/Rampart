@@ -7,13 +7,14 @@ public class BuildScript : MonoBehaviour {
 	public int buttonWidth;
 	public int buttonHeight;
 
-	private List<GameObject> towers;
 	private List<GameObject> playField;
 
 	private GameObject inHand;
 
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
+
+    public List<GameObject> towerPrefabs;
 
 	// Use this for initialization
 	void Start()
@@ -25,12 +26,12 @@ public class BuildScript : MonoBehaviour {
 		this.mainScript = mainScript;
 		playField = mainScript.playField;
 		playFieldSpawner = mainScript.playFieldSpawner;
-		towers = LoadTowersFromResources();
+		//towers = LoadTowersFromResources();
 	}
 
 	void GetTowerInHand (int index)
 	{
-		inHand = (GameObject)Instantiate (this.towers [index]);
+		inHand = (GameObject)Instantiate (this.towerPrefabs [index]);
 	}
 
 	void OnGUI ()
@@ -78,14 +79,5 @@ public class BuildScript : MonoBehaviour {
 				PlaceTower(playFieldSpawner.GetTileBelowPoint(snapPosition));
 			}
 		}
-	}
-
-	private List<GameObject> LoadTowersFromResources()
-	{
-		List<GameObject> towers = new List<GameObject>();
-		towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Light", typeof(GameObject)));
-        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Splash", typeof(GameObject)));
-        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Heavy", typeof(GameObject)));
-		return towers;
 	}
 }
