@@ -1,0 +1,5 @@
+00 - 05 T-Pose
+10 - 35 Running with hammer
+40 - 58 Attacking
+60- 129 Idle
+135 - 189 Dying (Defeat)
