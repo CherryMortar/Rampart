@@ -1,0 +1,4 @@
+00 - 05 Base Pose
+05 - 21 Running
+25 - 60 Attack
+65 - 90 Dying

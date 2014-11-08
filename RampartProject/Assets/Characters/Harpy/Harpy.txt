@@ -1,0 +1,4 @@
+00 - 05 T-Pose
+10 - 43 Flying
+40 - 79 Attack
+85 - 118 Dying
