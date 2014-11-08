@@ -44,6 +44,11 @@ public class PathfindingManager : MonoBehaviour
         AstarPath.active.Scan();
     }
 
+    public void SetWalkable(int index, bool walkable)
+    {
+        gridGraph.nodes[index].Walkable = walkable;
+    }
+
     public void SetWalkable(Vector2 tile, bool walkable)
     {
         gridGraph.nodes[(int)(tile.x + tile.y * playFieldSpawner.fieldSize.x)].Walkable = walkable;
