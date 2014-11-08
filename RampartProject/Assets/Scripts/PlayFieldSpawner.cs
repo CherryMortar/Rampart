@@ -6,7 +6,7 @@ public class PlayFieldSpawner : MonoBehaviour
 {
 
     public GameObject tile;
-    public Vector2 size = new Vector2(1, 1);
+    public Vector2 tileSize = new Vector2(1, 1);
     public Vector2 fieldSize = new Vector2(8, 3);
 
 	// Use this for initialization
@@ -62,11 +62,11 @@ public class PlayFieldSpawner : MonoBehaviour
 
     public Vector2 GetTileBelowPoint(Vector3 pt)
     {
-        return new Vector2(Mathf.Round(pt.x / size.x), Mathf.Round(pt.y / size.y));
+        return new Vector2(Mathf.Round(pt.x / tileSize.x), Mathf.Round(pt.y / tileSize.y));
     }
 
     public Vector3 GetTileCenter(Vector2 tile)
     {
-        return new Vector3(tile.x * size.x + size.x / 2, 0, tile.y * size.y + size.y / 2);
+        return new Vector3(tile.x * tileSize.x + tileSize.x / 2, 0, tile.y * tileSize.y + tileSize.y / 2);
     }
 }
