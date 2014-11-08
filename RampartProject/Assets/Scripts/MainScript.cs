@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Pathfinding;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

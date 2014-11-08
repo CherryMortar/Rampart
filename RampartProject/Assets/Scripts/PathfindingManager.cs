@@ -68,9 +68,9 @@ public class PathfindingManager : MonoBehaviour
                 seekers[i].StartPath(start, end, callback);
                 return;
             }
-
-            seekers.Add(this.gameObject.AddComponent<Seeker>());
-            seekers[seekers.Count].StartPath(start, end, callback);
         }
+
+        seekers.Add(this.gameObject.AddComponent<Seeker>());
+        seekers[seekers.Count-1].StartPath(start, end, callback);
     }
 }
