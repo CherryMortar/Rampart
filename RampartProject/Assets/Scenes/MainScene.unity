@@ -224,7 +224,6 @@ GameObject:
   - 114: {fileID: 978774930}
   - 114: {fileID: 978774931}
   - 114: {fileID: 978774929}
-  - 114: {fileID: 978774932}
   m_Layer: 0
   m_Name: MainObject
   m_TagString: Untagged
@@ -356,6 +355,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonWidth: 200
   buttonHeight: 20
+  fontSize: 0
+  background: {fileID: 0}
   towerPrefabs:
   - {fileID: 100000, guid: fd801b90ccc7b58439a04e64f45def87, type: 2}
   - {fileID: 100004, guid: 7ff82a58fa12eb041933caffea1af4b7, type: 2}
