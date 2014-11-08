@@ -18,6 +18,7 @@ public class SpawnersCreator : MonoBehaviour
     public ushort spawnersCount = 3;
     public Vector3[] spawnersPosition;
     public GameObject spawnerPrefab;
+    public float spawnDelayForSpawners = 1f;
     // Use this for initialization
     void Start()
     {
@@ -29,7 +30,7 @@ public class SpawnersCreator : MonoBehaviour
                 GameObject spawner = (GameObject)Instantiate(spawnerPrefab, spawnersPosition[(int)i], Quaternion.identity);
                 SpawnScript spawnerScript = spawner.GetComponent<SpawnScript>();
                 spawnerScript.wave = enemiesInWave;
-                spawnerScript.spawnDelay = 1f;
+                spawnerScript.spawnDelay = spawnDelayForSpawners;
             }
         }
     }
