@@ -13,7 +13,7 @@ public class RangeUnitProperties : UnitProperties {
 
     private void FireProjectile(GameObject target)
     {
-        GameObject projectileInstance = (GameObject)Instantiate(projectile, firePosition, Quaternion.identity);
+        GameObject projectileInstance = (GameObject)Instantiate(projectile, transform.position + firePosition, Quaternion.identity);
         ProjectileScript projectileScript = projectileInstance.GetComponent<ProjectileScript>();
 
         projectileScript.targetObject = target;

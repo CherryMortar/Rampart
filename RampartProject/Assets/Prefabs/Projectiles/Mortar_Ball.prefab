@@ -12,6 +12,8 @@ GameObject:
   - 23: {fileID: 2300000}
   - 95: {fileID: 9500000}
   - 114: {fileID: 11400000}
+  - 135: {fileID: 13500000}
+  - 54: {fileID: 5400000}
   m_Layer: 0
   m_Name: Mortar_Ball
   m_TagString: Untagged
@@ -58,6 +60,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 4300000, guid: 6d935a60eeff3c7459fafae413b7f913, type: 3}
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -90,6 +107,18 @@ MonoBehaviour:
   damage: 0
   maxRange: Infinity
   tracking: 1
+--- !u!135 &13500000
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .0625599474
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
