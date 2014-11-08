@@ -9,9 +9,11 @@ public class UnitProperties : MonoBehaviour
 	//private bool dead;
 	public int sightRange;
 	public float reloadAttackTime;
-	public float lastAttackTime;
+    public float moveSpeed;
 	public GameObject currentTarget;
 	Animator animator;
+
+    protected float lastAttackTime;
 
 	public virtual void Attack()
 	{
