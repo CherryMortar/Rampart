@@ -8,7 +8,6 @@ public class BuildScript : MonoBehaviour {
 	public int buttonHeight;
 	public int fontSize;
 	public Texture2D background;
-	
 
 	private List<GameObject> playField;
 
@@ -19,7 +18,7 @@ public class BuildScript : MonoBehaviour {
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
 
-    public List<GameObject> towerPrefabs;
+	public List<GameObject> towerPrefabs;
 
 	// Use this for initialization
 	void Start()
@@ -32,7 +31,6 @@ public class BuildScript : MonoBehaviour {
 		this.mainScript = mainScript;
 		playField = mainScript.playField;
 		playFieldSpawner = mainScript.playFieldSpawner;
-		//towers = LoadTowersFromResources();
 	}
 
 	void GetTowerInHand (int index)
@@ -60,12 +58,12 @@ public class BuildScript : MonoBehaviour {
 
 	void PlaceTower (Vector2 tile)
 	{
-        Vector3 pos = playFieldSpawner.GetTileCenter(tile);
+		Vector3 pos = playFieldSpawner.GetTileCenter(tile);
 
-        Instantiate(inHand, pos, Quaternion.identity);
-        mainScript.pathfindingManager.SetWalkable(tile, false);
+		Instantiate(inHand, pos, Quaternion.identity);
+		mainScript.pathfindingManager.SetWalkable(tile, false);
 
-        Destroy(inHand);
+		Destroy(inHand);
 
 		inHand = null;
 	}
@@ -85,15 +83,6 @@ public class BuildScript : MonoBehaviour {
 				PlaceTower(playFieldSpawner.GetTileBelowPoint(snapPosition));
 			}
 		}
-	}
-
-	private List<GameObject> LoadTowersFromResources()
-	{
-		List<GameObject> towers = new List<GameObject>();
-		towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Light", typeof(GameObject)));
-        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Splash", typeof(GameObject)));
-        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Heavy", typeof(GameObject)));
-		return towers;
 	}
 	
 	private GUIStyle generateStyle() 

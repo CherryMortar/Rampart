@@ -10,6 +10,7 @@ public class MainScript : MonoBehaviour
     public PlayFieldSpawner playFieldSpawner;
     public PathfindingManager pathfindingManager;
     public BuildScript buildScript;
+    public TerrainGenerator terrainGenerator;
 
     // Use this for initialization
     void Start()
@@ -20,6 +21,10 @@ public class MainScript : MonoBehaviour
         pathfindingManager.InitGraph();
 
         buildScript.Initialize(this);
+        terrainGenerator.Initialize(this);
+
+        terrainGenerator.GenerateTerrain();
+
         for (int i = 0; i < playField.Count; i++)
         {
             if(!playField[i].activeSelf)

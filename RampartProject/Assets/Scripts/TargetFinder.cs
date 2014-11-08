@@ -32,11 +32,11 @@ public class TargetFinder : MonoBehaviour
             if (this.CompareTag(ENEMY_TAG))
             {
                 GameObject closestHero = FindNearestWithTag(HERO_TAG);
-                GameObject closestBuilding = FindNearestWithTag(CITADEL_TAG);
+                GameObject closestCitadel = FindNearestWithTag(CITADEL_TAG);
 
                 if (closestHero == null || GetDistance(this.gameObject, closestHero) > sightRange)
                 {
-                    currentTarget = closestBuilding;
+                    currentTarget = closestCitadel;
                 }
                 else
                 {

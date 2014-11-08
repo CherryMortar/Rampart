@@ -1,0 +1,671 @@
+fileFormatVersion: 2
+guid: 1eb41b5955f10af4abfdcd4f756fbea2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: curve1
+    100002: Dlan
+    100004: Dlan 1
+    100006: Eyes
+    100008: Head
+    100010: Hidolo
+    100012: ikHandle3
+    100014: ikHandle4
+    100016: ikHandle5
+    100018: Jaw
+    100020: joint13
+    100022: joint14
+    100024: joint15
+    100026: joint16
+    100028: joint17
+    100030: joint18
+    100032: joint19
+    100034: joint20
+    100036: joint21
+    100038: joint22
+    100040: joint23
+    100042: joint28
+    100044: joint29
+    100046: joint33
+    100048: joint34
+    100050: joint35
+    100052: joint44
+    100054: joint45
+    100056: joint46
+    100058: joint47
+    100060: joint48
+    100062: joint49
+    100064: joint54
+    100066: joint55
+    100068: joint56
+    100070: joint57
+    100072: joint58
+    100074: joint59
+    100076: LArmLakut
+    100078: LArmRamo
+    100080: LBackKolqno
+    100082: LKitka
+    100084: LZadenGlezen
+    100086: LZadnoBedro
+    100088: pCube1
+    100090: pCube4
+    100092: pCube7
+    100094: pCube9
+    100096: RArmLakut
+    100098: RArmRamo
+    100100: //RootNode
+    100102: RKitka
+    100104: Root
+    100106: RZadenGlezen
+    100108: RZadnoBedro
+    100110: RZadnoKolqno
+    100112: Spine
+    100114: Spine2
+    100116: Spine3
+    100118: Spine4
+    100120: Spine5
+    100122: Spine6
+    100124: Teeth
+    100126: Tile
+    100128: transform4
+    100130: transform6
+    400000: curve1
+    400002: Dlan
+    400004: Dlan 1
+    400006: Eyes
+    400008: Head
+    400010: Hidolo
+    400012: ikHandle3
+    400014: ikHandle4
+    400016: ikHandle5
+    400018: Jaw
+    400020: joint13
+    400022: joint14
+    400024: joint15
+    400026: joint16
+    400028: joint17
+    400030: joint18
+    400032: joint19
+    400034: joint20
+    400036: joint21
+    400038: joint22
+    400040: joint23
+    400042: joint28
+    400044: joint29
+    400046: joint33
+    400048: joint34
+    400050: joint35
+    400052: joint44
+    400054: joint45
+    400056: joint46
+    400058: joint47
+    400060: joint48
+    400062: joint49
+    400064: joint54
+    400066: joint55
+    400068: joint56
+    400070: joint57
+    400072: joint58
+    400074: joint59
+    400076: LArmLakut
+    400078: LArmRamo
+    400080: LBackKolqno
+    400082: LKitka
+    400084: LZadenGlezen
+    400086: LZadnoBedro
+    400088: pCube1
+    400090: pCube4
+    400092: pCube7
+    400094: pCube9
+    400096: RArmLakut
+    400098: RArmRamo
+    400100: //RootNode
+    400102: RKitka
+    400104: Root
+    400106: RZadenGlezen
+    400108: RZadnoBedro
+    400110: RZadnoKolqno
+    400112: Spine
+    400114: Spine2
+    400116: Spine3
+    400118: Spine4
+    400120: Spine5
+    400122: Spine6
+    400124: Teeth
+    400126: Tile
+    400128: transform4
+    400130: transform6
+    4300000: pCube9
+    7400000: Death
+    7400002: Attack
+    7400004: Running
+    9500000: //RootNode
+    13700000: pCube9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 65
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: curve1
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: ikHandle4
+        weight: 1
+      - path: ikHandle5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform4
+        weight: 1
+      - path: pCube4
+        weight: 1
+      - path: pCube7
+        weight: 1
+      - path: pCube7/transform6
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Spine
+        weight: 1
+      - path: Root/Spine/LZadnoBedro
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28/joint29
+        weight: 1
+      - path: Root/Spine/RZadnoBedro
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34/joint35
+        weight: 1
+      - path: Root/Spine/Spine2
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55/joint56
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Eyes
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw/Teeth
+        weight: 1
+      - path: Root/Tile
+        weight: 1
+      - path: Root/Tile/joint13
+        weight: 1
+      - path: Root/Tile/joint13/joint14
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22/joint23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Running
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: curve1
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: ikHandle4
+        weight: 1
+      - path: ikHandle5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform4
+        weight: 1
+      - path: pCube4
+        weight: 1
+      - path: pCube7
+        weight: 1
+      - path: pCube7/transform6
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Spine
+        weight: 1
+      - path: Root/Spine/LZadnoBedro
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28/joint29
+        weight: 1
+      - path: Root/Spine/RZadnoBedro
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34/joint35
+        weight: 1
+      - path: Root/Spine/Spine2
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55/joint56
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Eyes
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw/Teeth
+        weight: 1
+      - path: Root/Tile
+        weight: 1
+      - path: Root/Tile/joint13
+        weight: 1
+      - path: Root/Tile/joint13/joint14
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22/joint23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: curve1
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: ikHandle4
+        weight: 1
+      - path: ikHandle5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform4
+        weight: 1
+      - path: pCube4
+        weight: 1
+      - path: pCube7
+        weight: 1
+      - path: pCube7/transform6
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Spine
+        weight: 1
+      - path: Root/Spine/LZadnoBedro
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28/joint29
+        weight: 1
+      - path: Root/Spine/RZadnoBedro
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34/joint35
+        weight: 1
+      - path: Root/Spine/Spine2
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55/joint56
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Eyes
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw/Teeth
+        weight: 1
+      - path: Root/Tile
+        weight: 1
+      - path: Root/Tile/joint13
+        weight: 1
+      - path: Root/Tile/joint13/joint14
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22/joint23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

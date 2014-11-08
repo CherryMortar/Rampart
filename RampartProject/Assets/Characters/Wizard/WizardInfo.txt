@@ -1,0 +1,5 @@
+00 T-Pose
+05 - 30 Walking
+35 - 80 Attack
+85 - 200 Idle
+205 - 234 Dying
