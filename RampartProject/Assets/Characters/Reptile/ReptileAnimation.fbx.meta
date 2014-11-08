@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1eb41b5955f10af4abfdcd4f756fbea2
+guid: dc67ac4980a8f5144930bc49fb08b6db
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -136,9 +136,9 @@ ModelImporter:
     400128: transform4
     400130: transform6
     4300000: pCube9
-    7400000: Death
-    7400002: Attack
-    7400004: Running
+    7400000: Attack
+    7400002: Running
+    7400004: Death
     9500000: //RootNode
     13700000: pCube9
   materials:
@@ -158,10 +158,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Death
+      name: Attack
       takeName: Take 001
-      firstFrame: 65
-      lastFrame: 90
+      firstFrame: 25
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -325,7 +325,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -474,16 +474,16 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Attack
+      name: Death
       takeName: Take 001
-      firstFrame: 25
-      lastFrame: 60
+      firstFrame: 65
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
