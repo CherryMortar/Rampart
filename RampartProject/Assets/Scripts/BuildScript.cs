@@ -40,17 +40,18 @@ public class BuildScript : MonoBehaviour {
 
 	void OnGUI ()
 	{	
-		if(GUI.Button (new Rect(20, 40, buttonWidth, buttonHeight), "Normal Tower", style))
+		GUI.Box(new Rect(Screen.width/2 - 358/2, Screen.height - 198, 358, 198), "", style);
+		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), "Normal Tower"))
 		{
 			GetTowerInHand (0);
 		}
 
-		if(GUI.Button (new Rect(20, 100, buttonWidth, buttonHeight), "Splash Tower", style)) 
+		if(GUI.Button (new Rect(Screen.width/2 + buttonWidth - 30, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), "Splash Tower")) 
 		{
 			GetTowerInHand (1);
 		}
 
-		if (GUI.Button (new Rect(20, 160, buttonWidth, buttonHeight), "Strong Tower", style))
+		if (GUI.Button (new Rect(Screen.width/2 - buttonWidth - 60, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), "Strong Tower"))
 		{
 			GetTowerInHand (2);
 		}
