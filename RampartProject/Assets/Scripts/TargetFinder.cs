@@ -10,14 +10,12 @@ public class TargetFinder : MonoBehaviour
     private GameObject currentTarget;
     public float sightRange = 10;
 
-    // Use this for initialization
-    void Start()
+    public GameObject GetCurrentTarget()
     {
-
+        return currentTarget;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FindTarget()
     {
         if (currentTarget != null)
         {
@@ -57,13 +55,13 @@ public class TargetFinder : MonoBehaviour
         }
     }
 
-    private GameObject FindNearestWithTag(string tag)
+    protected GameObject FindNearestWithTag(string tag)
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
         return FindNearest(objects);
     }
 
-    public GameObject FindNearest(ICollection items)
+    protected GameObject FindNearest(ICollection items)
     {
         GameObject nearest = null;
 
