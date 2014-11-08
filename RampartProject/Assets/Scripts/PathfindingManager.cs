@@ -6,7 +6,7 @@ public class PathfindingManager : MonoBehaviour
 {
     protected AstarData astarData;
     protected GridGraph gridGraph;
-    protected List<Seeker> seekers;
+    //protected List<Seeker> seekers;
     protected PlayFieldSpawner playFieldSpawner;
 
     public int nodesPerTile = 1;
@@ -20,7 +20,7 @@ public class PathfindingManager : MonoBehaviour
         playFieldSpawner = GetComponent<PlayFieldSpawner>();
         astarData = AstarPath.active.astarData;
 
-        seekers = new List<Seeker>();
+        //seekers = new List<Seeker>();
     }
 
     public void InitGraph()
@@ -74,18 +74,25 @@ public class PathfindingManager : MonoBehaviour
         return gridGraph.nodes[GetNodeIndexesInTile((int)(tile.x + tile.y * playFieldSpawner.fieldSize.x))[0]].Walkable;
     }
 
-    public void FindPath(Vector3 start, Vector3 end, OnPathDelegate callback)
+    /*public void FindPath(Vector3 start, Vector3 end, OnPathDelegate callback)
     {
         for (int i = 0; i < seekers.Count; i++)
         {
             if (seekers[i].IsDone())
             {
-                seekers[i].StartPath(start, end, callback);
+                Debug.Log("mamka");
+                seekers[i].StartPath(start, end, opc);
                 return;
             }
         }
 
+        Debug.Log("ti");
         seekers.Add(this.gameObject.AddComponent<Seeker>());
-        seekers[seekers.Count-1].StartPath(start, end, callback);
+        seekers[seekers.Count-1].StartPath(start, end, opc);
     }
+
+    public void opc(Path p)
+    {
+        Debug.Log("Bender");
+    }*/
 }
