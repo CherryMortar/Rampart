@@ -6,10 +6,15 @@ public class BuildScript : MonoBehaviour {
 
 	public int buttonWidth;
 	public int buttonHeight;
+	public int fontSize;
+	public Texture2D background;
+	
 
 	private List<GameObject> playField;
 
 	private GameObject inHand;
+	
+	private GUIStyle style;
 
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
@@ -19,6 +24,7 @@ public class BuildScript : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
+		style = generateStyle();
 	}
 	
 	public void Initialize(MainScript mainScript)
@@ -35,18 +41,18 @@ public class BuildScript : MonoBehaviour {
 	}
 
 	void OnGUI ()
-	{
-		if(GUI.Button (new Rect(20, 40, buttonWidth, buttonHeight), "Normal Tower"))
+	{	
+		if(GUI.Button (new Rect(20, 40, buttonWidth, buttonHeight), "Normal Tower", style))
 		{
 			GetTowerInHand (0);
 		}
 
-		if(GUI.Button (new Rect(20, 70, buttonWidth, buttonHeight), "Splash Tower")) 
+		if(GUI.Button (new Rect(20, 100, buttonWidth, buttonHeight), "Splash Tower", style)) 
 		{
 			GetTowerInHand (1);
 		}
 
-		if (GUI.Button (new Rect(20, 100, buttonWidth, buttonHeight), "Strong Tower"))
+		if (GUI.Button (new Rect(20, 160, buttonWidth, buttonHeight), "Strong Tower", style))
 		{
 			GetTowerInHand (2);
 		}
@@ -79,5 +85,28 @@ public class BuildScript : MonoBehaviour {
 				PlaceTower(playFieldSpawner.GetTileBelowPoint(snapPosition));
 			}
 		}
+	}
+
+	private List<GameObject> LoadTowersFromResources()
+	{
+		List<GameObject> towers = new List<GameObject>();
+		towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Light", typeof(GameObject)));
+        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Splash", typeof(GameObject)));
+        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Heavy", typeof(GameObject)));
+		return towers;
+	}
+	
+	GUIStyle generateStyle() 
+	{
+		GUIStyle style = new GUIStyle();
+		style.fontSize = fontSize;
+		style.normal.textColor = Color.white;
+		style.hover.textColor = Color.white;
+		style.active.textColor = Color.white;
+		style.normal.background = background;
+		style.hover.background = background;
+		style.active.background = background;
+		style.alignment = TextAnchor.MiddleCenter;
+		return style;
 	}
 }

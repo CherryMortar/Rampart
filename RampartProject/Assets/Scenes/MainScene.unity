@@ -224,6 +224,7 @@ GameObject:
   - 114: {fileID: 978774930}
   - 114: {fileID: 978774931}
   - 114: {fileID: 978774929}
+  - 114: {fileID: 978774932}
   m_Layer: 0
   m_Name: MainObject
   m_TagString: Untagged
