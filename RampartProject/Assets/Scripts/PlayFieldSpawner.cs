@@ -24,6 +24,7 @@ public class PlayFieldSpawner : MonoBehaviour
     public List<GameObject> GeneratePlayField(int side)
     {
         List<GameObject> tiles = new List<GameObject>();
+        fieldSize = new Vector2(side, side);
 
         for (int i = 0; i < side; i++)
             for (int j = 0; j < side; j++)
@@ -42,6 +43,7 @@ public class PlayFieldSpawner : MonoBehaviour
     public List<GameObject> GenerateJagtangularPlayField(int w, int h)
     {
         List<GameObject> tiles = new List<GameObject>();
+        fieldSize = new Vector2(w, w);
 
         for (int i = 0; i < w; i++)
             for (int j = 0; j < w; j++)

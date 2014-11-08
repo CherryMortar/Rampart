@@ -6,13 +6,16 @@ using System.Text;
 class MainScript : MonoBehaviour
 {
     protected List<GameObject> playField;
-    protected PlayFieldSpawner playFieldSpawner;
+    public PlayFieldSpawner playFieldSpawner;
+    public PathfindingManager pathfindingManager;
 
     // Use this for initialization
     void Start()
     {
-        playFieldSpawner = this.gameObject.GetComponent<PlayFieldSpawner>();
+        pathfindingManager.Initialize();
+
         playField = playFieldSpawner.GenerateJagtangularPlayField();
+        pathfindingManager.InitGraph();
     }
 
     // Update is called once per frame
