@@ -16,10 +16,7 @@ public abstract class UnitProperties : MonoBehaviour
 
     protected float lastAttackTime;
 
-	public virtual void Attack(GameObject target)
-	{
-		Debug.Log("Virtual attack called");
-	}
+    public abstract void Attack(GameObject target);
 
     public void TakeDamage(int damage)
     {
