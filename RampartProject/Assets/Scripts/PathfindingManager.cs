@@ -44,6 +44,21 @@ public class PathfindingManager : MonoBehaviour
         AstarPath.active.Scan();
     }
 
+    public void SetWalkable(int index, bool walkable)
+    {
+        gridGraph.nodes[index].Walkable = walkable;
+    }
+
+    public void SetWalkable(Vector2 tile, bool walkable)
+    {
+        gridGraph.nodes[(int)(tile.x + tile.y * playFieldSpawner.fieldSize.x)].Walkable = walkable;
+    }
+
+    public bool IsWalakble(Vector2 tile)
+    {
+        return gridGraph.nodes[(int)(tile.x + tile.y * playFieldSpawner.fieldSize.x)].Walkable;
+    }
+
     public void FindPath(Vector3 start, Vector3 end, OnPathDelegate callback)
     {
         for (int i = 0; i < seekers.Count; i++)
@@ -53,9 +68,9 @@ public class PathfindingManager : MonoBehaviour
                 seekers[i].StartPath(start, end, callback);
                 return;
             }
-
-            seekers.Add(this.gameObject.AddComponent<Seeker>());
-            seekers[seekers.Count].StartPath(start, end, callback);
         }
+
+        seekers.Add(this.gameObject.AddComponent<Seeker>());
+        seekers[seekers.Count-1].StartPath(start, end, callback);
     }
 }
