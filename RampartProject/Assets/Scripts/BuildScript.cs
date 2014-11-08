@@ -15,8 +15,6 @@ public class BuildScript : MonoBehaviour {
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
 
-    float posY = 5;
-
 	// Use this for initialization
 	void Start()
 	{
@@ -56,7 +54,6 @@ public class BuildScript : MonoBehaviour {
 	void PlaceTower (Vector2 tile)
 	{
         Vector3 pos = playFieldSpawner.GetTileCenter(tile);
-        pos.y = posY;
 
         Instantiate(inHand, pos, Quaternion.identity);
         mainScript.pathfindingManager.SetWalkable(tile, false);
@@ -73,7 +70,7 @@ public class BuildScript : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			float distance = ray.origin.y / (-ray.direction.y);
 			Vector3 point = ray.GetPoint (distance);
-			Vector3 snapPosition = new Vector3 (point.x, posY, point.z);
+			Vector3 snapPosition = new Vector3 (point.x, 0, point.z);
 			inHand.transform.position = snapPosition;
 
 			if(Input.GetMouseButtonDown(0))
@@ -86,9 +83,9 @@ public class BuildScript : MonoBehaviour {
 	private List<GameObject> LoadTowersFromResources()
 	{
 		List<GameObject> towers = new List<GameObject>();
-		towers.Add((GameObject)Resources.Load("Towers/NormalTower", typeof(GameObject)));
-		towers.Add((GameObject)Resources.Load("Towers/SplashTower", typeof(GameObject)));
-		towers.Add((GameObject)Resources.Load("Towers/StrongTower", typeof(GameObject)));
+		towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Light", typeof(GameObject)));
+        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Splash", typeof(GameObject)));
+        towers.Add((GameObject)Resources.Load("Towers/Tower_Wood_Heavy", typeof(GameObject)));
 		return towers;
 	}
 }
