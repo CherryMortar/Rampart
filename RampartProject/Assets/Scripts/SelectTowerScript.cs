@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SplashScreenScript : MonoBehaviour {
-
-	public Texture2D logo;
-	public Font font;
-	public int fontSize;
-	public int paddingTop;
-
-	// Use this for initialization
-	void Start ()
+public class SelectTowerScript : MonoBehaviour {
+	
+	void OnMouseDown()
 	{
+		Debug.Log("Clicked");
 	}
 	
 	void OnGUI()
 	{
-		GUI.skin.font = font;
 		
-		if(GUI.Button(new Rect(0, 0, Screen.width, Screen.height), "Click to start", style()))
-		{
-			enabled = false;
-		}
+	}
+	
+	private GUI generateBox()
+	{
+			
 	}
 	
 	private GUIStyle style() 

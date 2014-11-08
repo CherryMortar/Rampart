@@ -96,7 +96,7 @@ public class BuildScript : MonoBehaviour {
 		return towers;
 	}
 	
-	GUIStyle generateStyle() 
+	private GUIStyle generateStyle() 
 	{
 		GUIStyle style = new GUIStyle();
 		style.fontSize = fontSize;
