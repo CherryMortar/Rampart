@@ -136,7 +136,9 @@ ModelImporter:
     400128: transform4
     400130: transform6
     4300000: pCube9
-    7400000: Take 001
+    7400000: Death
+    7400002: Attack
+    7400004: Running
     9500000: //RootNode
     13700000: pCube9
   materials:
@@ -154,7 +156,481 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 65
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: curve1
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: ikHandle4
+        weight: 1
+      - path: ikHandle5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform4
+        weight: 1
+      - path: pCube4
+        weight: 1
+      - path: pCube7
+        weight: 1
+      - path: pCube7/transform6
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Spine
+        weight: 1
+      - path: Root/Spine/LZadnoBedro
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28/joint29
+        weight: 1
+      - path: Root/Spine/RZadnoBedro
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34/joint35
+        weight: 1
+      - path: Root/Spine/Spine2
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55/joint56
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Eyes
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw/Teeth
+        weight: 1
+      - path: Root/Tile
+        weight: 1
+      - path: Root/Tile/joint13
+        weight: 1
+      - path: Root/Tile/joint13/joint14
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22/joint23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Running
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: curve1
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: ikHandle4
+        weight: 1
+      - path: ikHandle5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform4
+        weight: 1
+      - path: pCube4
+        weight: 1
+      - path: pCube7
+        weight: 1
+      - path: pCube7/transform6
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Spine
+        weight: 1
+      - path: Root/Spine/LZadnoBedro
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28/joint29
+        weight: 1
+      - path: Root/Spine/RZadnoBedro
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34/joint35
+        weight: 1
+      - path: Root/Spine/Spine2
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55/joint56
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Eyes
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw/Teeth
+        weight: 1
+      - path: Root/Tile
+        weight: 1
+      - path: Root/Tile/joint13
+        weight: 1
+      - path: Root/Tile/joint13/joint14
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22/joint23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: curve1
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: ikHandle4
+        weight: 1
+      - path: ikHandle5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform4
+        weight: 1
+      - path: pCube4
+        weight: 1
+      - path: pCube7
+        weight: 1
+      - path: pCube7/transform6
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Spine
+        weight: 1
+      - path: Root/Spine/LZadnoBedro
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28
+        weight: 1
+      - path: Root/Spine/LZadnoBedro/LBackKolqno/LZadenGlezen/Hidolo/joint28/joint29
+        weight: 1
+      - path: Root/Spine/RZadnoBedro
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34
+        weight: 1
+      - path: Root/Spine/RZadnoBedro/RZadnoKolqno/RZadenGlezen/joint33/joint34/joint35
+        weight: 1
+      - path: Root/Spine/Spine2
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/LArmRamo/LArmLakut/RKitka/Dlan/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint54/joint55/joint56
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/RArmRamo/RArmLakut/LKitka/Dlan 1/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Eyes
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw
+        weight: 1
+      - path: Root/Spine/Spine2/Spine3/Spine4/Spine5/Spine6/Head/Jaw/Teeth
+        weight: 1
+      - path: Root/Tile
+        weight: 1
+      - path: Root/Tile/joint13
+        weight: 1
+      - path: Root/Tile/joint13/joint14
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22
+        weight: 1
+      - path: Root/Tile/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22/joint23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
