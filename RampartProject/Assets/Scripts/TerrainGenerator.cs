@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class TerrainGenerator : MonoBehaviour {
 
     public List<GameObject> terrainTiles;
+    public GameObject groundTile;
     public Vector2 terrainTileSize;
     public int terrainRings = 1;
 
@@ -18,6 +19,9 @@ public class TerrainGenerator : MonoBehaviour {
     {
         Vector2 tileSize = mainScript.playFieldSpawner.tileSize;
         Vector2 fieldSize = mainScript.playFieldSpawner.fieldSize;
+
+        GameObject ground = (GameObject)Instantiate(groundTile, new Vector3(fieldSize.x * tileSize.x / 2, 0, fieldSize.y * tileSize.y / 2), Quaternion.identity);
+        ground.transform.localScale = new Vector3(fieldSize.x*2.5f, 1, fieldSize.y*2.5f);
 
         for (int ring = 0; ring < terrainRings; ring++)
         {
