@@ -59,6 +59,8 @@ public class BuildScript : MonoBehaviour {
         pos.y = posY;
 
         Instantiate(inHand, pos, Quaternion.identity);
+        mainScript.pathfindingManager.SetWalkable(tile, false);
+
         Destroy(inHand);
 
 		inHand = null;

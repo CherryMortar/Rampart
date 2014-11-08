@@ -7,16 +7,17 @@ public class TargetFinder : MonoBehaviour
     private const string ENEMY_TAG = "Enemy";
     private const string HERO_TAG = "Hero";
     private const string BUILDING_TAG = "Building";
-    private GameObject currentTarget;
-    public float sightRange = 10;
+    private GameObject currentTarget = null;
 
-    public GameObject GetCurrentTarget()
+    public GameObject CurrentTarget
     {
-        return currentTarget;
+        get { return currentTarget; }
     }
 
-    public void FindTarget()
+    public bool FindTarget(float sightRange)
     {
+        GameObject prevTarget = currentTarget;
+
         if (currentTarget != null)
         {
             if (GetDistance(this.gameObject, currentTarget) > sightRange)
@@ -27,7 +28,7 @@ public class TargetFinder : MonoBehaviour
         {
             if (this.CompareTag(ENEMY_TAG))
             {
-                GameObject closestHero = FindNearestWithTag(ENEMY_TAG);
+                GameObject closestHero = FindNearestWithTag(HERO_TAG);
                 GameObject closestBuilding = FindNearestWithTag(BUILDING_TAG);
 
                 if (closestHero == null || GetDistance(this.gameObject, closestHero) > sightRange)
@@ -53,6 +54,8 @@ public class TargetFinder : MonoBehaviour
                 }
             }
         }
+
+        return prevTarget != currentTarget;
     }
 
     protected GameObject FindNearestWithTag(string tag)
