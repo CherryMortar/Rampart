@@ -27,9 +27,8 @@ public class ProjectileScript : MonoBehaviour
         if (tracking)
         {
             targetPosition = targetObject.transform.position + new Vector3(0, 1, 0);
+            transform.LookAt(targetPosition);
         }
-
-        transform.LookAt(targetPosition);
 
         passedRange += Time.deltaTime * speed;
         if (passedRange > maxRange)
