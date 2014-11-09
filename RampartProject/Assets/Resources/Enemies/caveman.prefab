@@ -2465,7 +2465,7 @@ GameObject:
   - 136: {fileID: 13600000}
   m_Layer: 0
   m_Name: caveman
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4654,6 +4654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20ab75ac61fa174caee67792f440e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTarget: {fileID: 0}
   chaseTarget: 1
 --- !u!114 &11400002
 MonoBehaviour:
@@ -4672,7 +4673,6 @@ MonoBehaviour:
   sightRange: 10
   reloadAttackTime: 1
   moveSpeed: 10
-  currentTarget: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4687,7 +4687,6 @@ MonoBehaviour:
   targetFinder: {fileID: 11400000}
   targetSearchInterval: 1
   aiActive: 1
-  mainScript: {fileID: 11400002, guid: 500eb68a0ab927248a8e7a42c0c84024, type: 2}
   unitProperties: {fileID: 11400002}
 --- !u!136 &13600000
 CapsuleCollider:
