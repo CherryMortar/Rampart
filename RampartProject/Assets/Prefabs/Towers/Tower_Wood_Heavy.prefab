@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf8275fb02e90e47b278f606e4c1c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerInfoTexture: {fileID: 2800000, guid: 8eb77e734494f6349a4312491009f3ec, type: 3}
+  towerInfoTexture: {fileID: 2800000, guid: 093676c5eda01bc4e8710d1957c0101a, type: 3}
   upgradeButtonTexture: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff,
     type: 3}
 --- !u!1001 &100100000
