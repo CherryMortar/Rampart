@@ -25,6 +25,8 @@ public class InterfaceScript : MonoBehaviour {
 	private RampartGameState gameState;
 
 	private int tileIndex;
+	
+	private int money;
 
 	const int MENU_WIDTH = 358;
 	const int MENU_HEIGHT = 198;
@@ -45,6 +47,7 @@ public class InterfaceScript : MonoBehaviour {
 	public void Initialize(MainScript mainScript)
 	{
 		this.mainScript = mainScript;
+		money = mainScript.money;
 		gameState = mainScript.GameState;
 		playField = mainScript.playField;
 		playFieldSpawner = mainScript.playFieldSpawner;
@@ -64,6 +67,7 @@ public class InterfaceScript : MonoBehaviour {
 			gameObject.GetComponent<SplashScreenScript>().enabled = true;
 			break;
 		case RampartGameState.BuildingPhase:
+			GUI.Label(new Rect(Screen.width - 200, Screen.height - buttonHeight, 200, 50), money.ToString(), moneyStyle());
 			if(GUI.Button(new Rect(Screen.width/2 - START_WAVE_BTN_WIDTH/2, START_WAVE_BTN_HEIGHT/2, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Start wave", startWaveButtonStyle))
 			{
 				towers = GameObject.FindGameObjectsWithTag("Building");
@@ -93,6 +97,7 @@ public class InterfaceScript : MonoBehaviour {
 			}
 			break;
 		case RampartGameState.WavePhase:
+			GUI.Label(new Rect(Screen.width - 200, Screen.height - buttonHeight, 200, 50), money.ToString(), moneyStyle());
 			break;
 		case RampartGameState.Loss:
 			mainScript.GetComponent<LossScreenScript>().enabled = true;
@@ -162,6 +167,16 @@ public class InterfaceScript : MonoBehaviour {
 		style.active.textColor = Color.white;
 			
 		style.alignment = TextAnchor.MiddleCenter;
+		return style;
+	}
+	
+	private GUIStyle moneyStyle() 
+	{
+		GUIStyle style = new GUIStyle();
+		style.fontSize = 60;
+		style.normal.textColor = Color.white;
+		
+		style.alignment = TextAnchor.MiddleLeft;
 		return style;
 	}
 }

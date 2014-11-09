@@ -15,6 +15,8 @@ public class MainScript : MonoBehaviour
     public RampartGameState gameState = RampartGameState.Splash;
 
     public RampartGameState GameState { get { return gameState; } set { gameState = value; } }
+    
+    public int money;
 
     // Use this for initialization
     void Start()
@@ -24,6 +26,7 @@ public class MainScript : MonoBehaviour
         playField = playFieldSpawner.GenerateJagtangularPlayField();
         pathfindingManager.InitGraph();
 
+		money = 0;
         interfaceScript.Initialize(this);
         terrainGenerator.Initialize(this);
 
@@ -34,6 +37,7 @@ public class MainScript : MonoBehaviour
             if(!playField[i].activeSelf)
                 pathfindingManager.SetWalkable(i, false);
         }
+        
     }
 
     // Update is called once per frame
