@@ -43,6 +43,7 @@ public abstract class AIController : MonoBehaviour {
             {
                 if (Vector3.Distance(gameObject.transform.position, unitProperties.CurrentTarget.transform.position) <= unitProperties.attackRange)
                 {
+                    unitProperties.FaceTarget();
                     if (Time.time - lastAttackTime > unitProperties.reloadAttackTime)
                     {
                         unitProperties.Attack(unitProperties.CurrentTarget);

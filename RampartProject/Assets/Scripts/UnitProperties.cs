@@ -20,6 +20,10 @@ public abstract class UnitProperties : MonoBehaviour
 
 	public abstract void Attack(GameObject target);
 
+    public virtual void FaceTarget()
+    {
+    }
+
 	public void TakeDamage(int damage)
 	{
 		Debug.Log("taking it" + damage);

@@ -21,6 +21,8 @@ public class InterfaceScript : MonoBehaviour {
 
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
+	
+	private RampartGameState gameState;
 
 	private int tileIndex;
 
@@ -43,6 +45,7 @@ public class InterfaceScript : MonoBehaviour {
 	public void Initialize(MainScript mainScript)
 	{
 		this.mainScript = mainScript;
+		gameState = mainScript.GameState;
 		playField = mainScript.playField;
 		playFieldSpawner = mainScript.playFieldSpawner;
 	}
@@ -54,32 +57,46 @@ public class InterfaceScript : MonoBehaviour {
 
 	void OnGUI ()
 	{
-		if(GUI.Button(new Rect(Screen.width/2 - START_WAVE_BTN_WIDTH/2, START_WAVE_BTN_HEIGHT/2, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Start wave", startWaveButtonStyle))
+		gameState = mainScript.GameState;
+		switch(gameState)
 		{
-			towers = GameObject.FindGameObjectsWithTag("Building");
-			foreach(GameObject tower in towers)
+		case RampartGameState.Splash:
+			gameObject.GetComponent<SplashScreenScript>().enabled = true;
+			break;
+		case RampartGameState.BuildingPhase:
+			if(GUI.Button(new Rect(Screen.width/2 - START_WAVE_BTN_WIDTH/2, START_WAVE_BTN_HEIGHT/2, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Start wave", startWaveButtonStyle))
 			{
-				SelectTowerScript selectScript = tower.GetComponent<SelectTowerScript>();
-				if(selectScript != null)
-					selectScript.enabled = false;
+				towers = GameObject.FindGameObjectsWithTag("Building");
+				foreach(GameObject tower in towers)
+				{
+	                SelectTowerScript selectScript = tower.GetComponent<SelectTowerScript>();
+	                if(selectScript != null)
+					    selectScript.enabled = false;
+				}
+	            inHand = null;
+	            mainScript.StartWave();
 			}
-			inHand = null;
-			mainScript.StartWave();
-		}
-		GUI.Box(new Rect (Screen.width / 2 - MENU_WIDTH / 2, Screen.height - MENU_HEIGHT, MENU_WIDTH, MENU_HEIGHT), "", style);
-		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
-		{
-			GetTowerInHand (0);
-		}
-
-		if(GUI.Button (new Rect(Screen.width/2 + buttonWidth - 30, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle)) 
-		{
-			GetTowerInHand (1);
-		}
-
-		if (GUI.Button (new Rect(Screen.width/2 - buttonWidth - 60, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
-		{
-			GetTowerInHand (2);
+			GUI.Box(new Rect (Screen.width / 2 - MENU_WIDTH / 2, Screen.height - MENU_HEIGHT, MENU_WIDTH, MENU_HEIGHT), "", style);
+			if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
+			{
+				GetTowerInHand (0);
+			}
+	
+			if(GUI.Button (new Rect(Screen.width/2 + buttonWidth - 30, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle)) 
+			{
+				GetTowerInHand (1);
+			}
+	
+			if (GUI.Button (new Rect(Screen.width/2 - buttonWidth - 60, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
+			{
+				GetTowerInHand (2);
+			}
+			break;
+		case RampartGameState.WavePhase:
+			break;
+		case RampartGameState.Loss:
+			mainScript.GetComponent<LossScreenScript>().enabled = true;
+			break;
 		}
 	}
 
