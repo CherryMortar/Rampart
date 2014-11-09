@@ -10,7 +10,9 @@ public abstract class UnitProperties : MonoBehaviour
 	public float reloadAttackTime;
 	public float moveSpeed;
 
-	public GameObject currentTarget;
+	protected GameObject currentTarget;
+
+    public GameObject CurrentTarget { get; set; }
 
 	Animator animator;
 
