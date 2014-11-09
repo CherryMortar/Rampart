@@ -196,6 +196,7 @@ MonoBehaviour:
   targetSearchInterval: .5
   aiActive: 1
   unitProperties: {fileID: 11400002}
+  animator: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,7 +246,7 @@ MonoBehaviour:
   towerInfoTexture: {fileID: 2800000, guid: 833f6d3d9acdc3146af19efe165d1e08, type: 3}
   upgradeButtonTexture: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff,
     type: 3}
-  upgradePrefab: {fileID: 0}
+  upgradePrefab: {fileID: 100048, guid: 7aebd23dc5b30e24c8f82385c06af5a0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
