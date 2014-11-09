@@ -18,7 +18,7 @@ public class MainScript : MonoBehaviour
 
     public RampartGameState GameState { get { return gameState; } set { gameState = value; } }
     
-    public int money;
+    public static int money;
 
     // Use this for initialization
     void Start()
@@ -28,7 +28,7 @@ public class MainScript : MonoBehaviour
         playField = playFieldSpawner.GenerateJagtangularPlayField();
         pathfindingManager.InitGraph();
 
-		money = 0;
+		money = 12210;
         interfaceScript.Initialize(this);
         terrainGenerator.Initialize(this);
 

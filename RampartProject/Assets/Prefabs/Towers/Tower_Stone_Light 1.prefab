@@ -632,6 +632,7 @@ MonoBehaviour:
   reloadAttackTime: 1
   moveSpeed: 0
   unitRadius: 5
+  price: 100
   projectile: {fileID: 100000, guid: 7922c79314129b245af202f758fc17ff, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
   weapon: {fileID: 0}
