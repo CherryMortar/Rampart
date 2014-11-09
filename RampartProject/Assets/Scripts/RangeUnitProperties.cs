@@ -36,7 +36,6 @@ public class RangeUnitProperties : UnitProperties {
 
     private void FireProjectile(GameObject target)
     {
-        Debug.Log("fir");
         GameObject projectileInstance = (GameObject)Instantiate(projectile, transform.position + firePosition, Quaternion.identity);
         ProjectileScript projectileScript = projectileInstance.GetComponent<ProjectileScript>();
 

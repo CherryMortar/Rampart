@@ -105,8 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10000
   attack: 10
-  attackRange: 100
-  sightRange: 100
+  attackRange: 70
+  sightRange: 70
   reloadAttackTime: 2
   moveSpeed: 0
   unitRadius: 5
@@ -114,6 +114,7 @@ MonoBehaviour:
   projectile: {fileID: 100000, guid: 7922c79314129b245af202f758fc17ff, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
   weapon: {fileID: 0}
+  bonusRotation: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +143,7 @@ MonoBehaviour:
   targetSearchInterval: 1
   aiActive: 1
   unitProperties: {fileID: 11400000}
+  animator: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -28,7 +28,6 @@ public abstract class UnitProperties : MonoBehaviour
 
 	public void TakeDamage(int damage)
 	{
-		Debug.Log("taking it" + damage);
 		this.health -= damage;
 		CheckIsDead();
 	}

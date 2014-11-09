@@ -1430,7 +1430,7 @@ MonoBehaviour:
   attack: 80
   attackRange: 200
   sightRange: 200
-  reloadAttackTime: 3
+  reloadAttackTime: 1
   moveSpeed: 0
   unitRadius: 5
   price: 110

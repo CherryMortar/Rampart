@@ -219,7 +219,7 @@ MonoBehaviour:
   projectile: {fileID: 100000, guid: cc48411ac0be0c5419f07ee8e0f2ab41, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
   weapon: {fileID: 100002}
-  bonusRotation: 270
+  bonusRotation: 90
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
