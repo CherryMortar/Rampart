@@ -15,9 +15,12 @@ public class BuildScript : MonoBehaviour {
 	
 	private GUIStyle style;
 	private GUIStyle buttonStyle;
+	private Color color;
 
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
+
+	private int tileIndex;
 
 	const int MENU_WIDTH = 358;
 	const int MENU_HEIGHT = 198;
@@ -83,9 +86,9 @@ public class BuildScript : MonoBehaviour {
 			float distance = ray.origin.y / (-ray.direction.y);
 			Vector3 point = ray.GetPoint (distance);
 			Vector3 snapPosition = new Vector3 (point.x, 0, point.z);
+			tileIndex = playFieldSpawner.GetTileIndex(playFieldSpawner.GetTileBelowPoint(snapPosition));
 			inHand.transform.position = snapPosition;
-
-			if(Input.GetMouseButtonDown(0))
+			if(Input.GetMouseButtonDown(0) && tileIndex < playField.Count && playField[tileIndex].activeSelf)
 			{
 				PlaceTower(playFieldSpawner.GetTileBelowPoint(snapPosition));
 			}
