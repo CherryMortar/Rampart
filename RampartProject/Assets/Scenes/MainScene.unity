@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  spawnerPrefab: {fileID: 100000, guid: 91b08d3a9daa47e429ad6dbb389e3d15, type: 2}
 --- !u!4 &23506564
 Transform:
   m_ObjectHideFlags: 0

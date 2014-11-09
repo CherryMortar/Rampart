@@ -31,11 +31,15 @@ public class SelectTowerScript : MonoBehaviour {
 		if(selected == this.gameObject)
 		{	
 			style = infoMenuStyle();
-			GUI.Box(new Rect (0, Screen.height - INFO_MENU_HEIGHT, INFO_MENU_WIDTH, INFO_MENU_HEIGHT), "", style);
-			if(GUI.Button(new Rect(110, Screen.height - 52, 100, 25), "Upgrade", upgradeButtonStyle()))
+			GUI.Box(new Rect(0, Screen.height - INFO_MENU_HEIGHT, INFO_MENU_WIDTH, INFO_MENU_HEIGHT), "", style);
+			GUI.Label(new Rect(60, Screen.height - 52, 100, 25), "INSERT CASH HERE", moneyStyle());
+			if(upgradePrefab != null)
 			{
-				Instantiate(upgradePrefab, gameObject.transform.position, Quaternion.identity);
-				Destroy(gameObject);
+				if(GUI.Button(new Rect(110, Screen.height - 52, 100, 25), "Upgrade", upgradeButtonStyle()))
+				{
+					Instantiate(upgradePrefab, gameObject.transform.position, Quaternion.identity);
+					Destroy(gameObject);
+				}
 			}
 		}
 	}
@@ -61,6 +65,15 @@ public class SelectTowerScript : MonoBehaviour {
 		style.normal.textColor = Color.white;
 		style.onHover.textColor = Color.magenta;
 		style.active.textColor = Color.black;
+		style.alignment = TextAnchor.MiddleCenter;
+		return style;
+	}
+	
+	private GUIStyle moneyStyle()
+	{
+		GUIStyle style = new GUIStyle();
+		style.fontSize = 20;
+		style.normal.textColor = Color.black;
 		style.alignment = TextAnchor.MiddleCenter;
 		return style;
 	}
