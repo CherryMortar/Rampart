@@ -9,4 +9,13 @@ public class MeleeUnitProperties : UnitProperties
 
         enemyProperties.TakeDamage(this.attack);
     }
+
+    public override bool CheckIsDead()
+    {
+        if (base.CheckIsDead())
+        {
+            return true;
+        }
+        return false;
+    }
 }

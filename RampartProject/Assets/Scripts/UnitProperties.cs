@@ -10,6 +10,7 @@ public abstract class UnitProperties : MonoBehaviour
 	public float reloadAttackTime;
 	public float moveSpeed;
     public float unitRadius;
+    public int price;
 
 	protected GameObject currentTarget;
 
@@ -32,14 +33,16 @@ public abstract class UnitProperties : MonoBehaviour
 		CheckIsDead();
 	}
 
-	public virtual void CheckIsDead()
+	public virtual bool CheckIsDead()
 	{
 		if (health < 0)
 		{
 			//Play Dead Animation
 			Destroy(gameObject);
 			currentTarget = null;
+            return true;
 		}
+        return false;
 	}
 }
 
