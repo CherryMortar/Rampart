@@ -42,7 +42,7 @@ public class SpawnersCreator : MonoBehaviour
             for (uint i = 0; i < spawnersCount; i++)
             {
                 Vector3 position = new Vector3(4 * playFieldSpawner.tileSize.x, 0, 2 * playFieldSpawner.tileSize.y);
-                GameObject spawner = (GameObject)Instantiate(spawnerPrefab,position, Quaternion.identity);
+                GameObject spawner = (GameObject)Instantiate(spawnerPrefab, spawnersPosition[i], Quaternion.identity);
                 SpawnScript spawnerScript = spawner.GetComponent<SpawnScript>();
                 spawnerScript.wave = enemiesInWave;
                 spawnerScript.spawnDelay = spawnDelayForSpawners;

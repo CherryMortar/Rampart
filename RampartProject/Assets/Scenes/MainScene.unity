@@ -74,46 +74,6 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!1 &23506562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 23506564}
-  - 114: {fileID: 23506563}
-  m_Layer: 0
-  m_Name: CreatorOfSpawners
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &23506563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 23506562}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f076eae6264cf140a8e1128c3a700e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 0
---- !u!4 &23506564
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 23506562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1 &758980131
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +174,7 @@ GameObject:
   - 114: {fileID: 978774932}
   - 114: {fileID: 978774934}
   - 114: {fileID: 978774931}
+  - 114: {fileID: 978774935}
   m_Layer: 0
   m_Name: MainObject
   m_TagString: Untagged
@@ -265,6 +226,7 @@ MonoBehaviour:
   pathfindingManager: {fileID: 978774930}
   interfaceScript: {fileID: 978774931}
   terrainGenerator: {fileID: 978774934}
+  citadel: {fileID: 100020, guid: 83fd771c4ecba8e4ab6a6c11217378ad, type: 2}
   gameState: 0
 --- !u!114 &978774929
 MonoBehaviour:
@@ -280,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   astarData:
     hasBeenReverted: 0
-    data: 504b030414000008080040776945cc7cc5e53f00000048000000090024006d6574612e6a736f6e0a002000000000000100180049753fcb1cfccf0149753fcb1cfccf0149753fcb1cfccf01ab562a4b2d2acecccf53b25232d633d53352d2514a2f4a2cc82856b23200324b335380ace8581da592ca8254bfc4dc5428372f3f25d539bf34af04ccaf0500504b01022d0014000008080040776945cc7cc5e53f000000480000000900240000000000000000000000000000006d6574612e6a736f6e0a002000000000000100180049753fcb1cfccf0149753fcb1cfccf0149753fcb1cfccf01504b050600000000010001005b0000008a0000000000
+    data: 504b0304140000080800227d6945cc7cc5e53f00000048000000090024006d6574612e6a736f6e0a0020000000000001001800a6ba26cf22fccf01a6ba26cf22fccf01a6ba26cf22fccf01ab562a4b2d2acecccf53b25232d633d53352d2514a2f4a2cc82856b23200324b335380ace8581da592ca8254bfc4dc5428372f3f25d539bf34af04ccaf0500504b01022d00140000080800227d6945cc7cc5e53f000000480000000900240000000000000000000000000000006d6574612e6a736f6e0a0020000000000001001800a6ba26cf22fccf01a6ba26cf22fccf01a6ba26cf22fccf01504b050600000000010001005b0000008a0000000000
     data_backup: 
     data_cachedStartup: 
     revertData: 
@@ -452,6 +414,17 @@ MonoBehaviour:
   groundTile: {fileID: 100000, guid: 8b0e6fe6cfb593843aec2d7b082e7c87, type: 2}
   terrainTileSize: {x: 40, y: 40}
   terrainRings: 3
+--- !u!114 &978774935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978774925}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679d544943ca7a447b8ce834e6c4e997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1165947979
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1001 &1268324519
 Prefab:
   m_ObjectHideFlags: 0

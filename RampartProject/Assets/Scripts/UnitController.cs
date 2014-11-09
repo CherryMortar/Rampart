@@ -38,6 +38,9 @@ public class UnitController : AIController {
 
     void MoveOnPath()
     {
+        if (Vector3.Distance(gameObject.transform.position, unitProperties.CurrentTarget.transform.position) <= unitProperties.attackRange + unitProperties.CurrentTarget.GetComponent<UnitProperties>().unitRadius)
+            return;
+
         Vector3 moveDir = (path.vectorPath[currentWaypoint] - gameObject.transform.position).normalized;
         gameObject.transform.position += moveDir * unitProperties.moveSpeed * Time.fixedDeltaTime;
         gameObject.transform.LookAt(path.vectorPath[currentWaypoint]);

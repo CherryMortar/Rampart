@@ -3413,8 +3413,10 @@ MonoBehaviour:
   sightRange: 30
   reloadAttackTime: 1
   moveSpeed: 10
-  projectile: {fileID: 100000, guid: 6d935a60eeff3c7459fafae413b7f913, type: 3}
-  firePosition: {x: .072752662, y: .0769556686, z: .0109902602}
+  unitRadius: 0
+  projectile: {fileID: 100000, guid: 4774bcd16ad8a1a49b0cec4b64912f68, type: 2}
+  firePosition: {x: 0, y: 10, z: .0109902602}
+  weapon: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

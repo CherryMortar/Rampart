@@ -9,6 +9,7 @@ public abstract class UnitProperties : MonoBehaviour
 	public float sightRange;
 	public float reloadAttackTime;
 	public float moveSpeed;
+    public float unitRadius;
 
 	protected GameObject currentTarget;
 
@@ -31,7 +32,7 @@ public abstract class UnitProperties : MonoBehaviour
 		CheckIsDead();
 	}
 
-	public void CheckIsDead()
+	public virtual void CheckIsDead()
 	{
 		if (health < 0)
 		{

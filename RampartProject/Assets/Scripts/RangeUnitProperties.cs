@@ -7,6 +7,9 @@ public class RangeUnitProperties : UnitProperties {
     public Vector3 firePosition;
     public GameObject weapon;
 
+    private Quaternion weaponInitialRotation = Quaternion.identity;
+    private bool weaponInitialRotaionSet = false;
+
     public override void Attack(GameObject target)
     {
         FireProjectile(target);            
@@ -16,10 +19,16 @@ public class RangeUnitProperties : UnitProperties {
     {
         base.FaceTarget();
 
+        if (!weaponInitialRotaionSet)
+        {
+            weaponInitialRotation = weapon.transform.rotation;
+            weaponInitialRotaionSet = true;
+        }
+
         if (weapon != null)
         {
-            Vector3 relativePos = new Vector3(currentTarget.transform.position.x, transform.position.y, currentTarget.transform.position.z) - transform.position;
-            weapon.transform.rotation = Quaternion.LookRotation(relativePos, new Vector3(0, 1, 0));
+            Vector3 relativePos = transform.position - new Vector3(currentTarget.transform.position.x, transform.position.y, currentTarget.transform.position.z);
+            weapon.transform.rotation = weaponInitialRotation * Quaternion.LookRotation(relativePos, new Vector3(0, 1, 0));
         }
     }
 
