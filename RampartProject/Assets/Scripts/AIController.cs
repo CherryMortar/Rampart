@@ -45,9 +45,9 @@ public abstract class AIController : MonoBehaviour {
             {
                 if (Vector3.Distance(gameObject.transform.position, unitProperties.CurrentTarget.transform.position) <= unitProperties.attackRange + unitProperties.CurrentTarget.GetComponent<UnitProperties>().unitRadius)
                 {
-                    if (animator != null && animator.GetInteger("state") != 1)
+                    if (animator != null && animator.GetInteger("state") != 2)
                     {
-                        animator.SetInteger("state", 1);
+                        animator.SetInteger("state", 2);
                     }
 
                     unitProperties.FaceTarget();

@@ -3396,6 +3396,7 @@ MonoBehaviour:
   targetSearchInterval: 1
   aiActive: 1
   unitProperties: {fileID: 11400002}
+  animator: {fileID: 9500000}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3414,6 +3415,7 @@ MonoBehaviour:
   reloadAttackTime: 1
   moveSpeed: 10
   unitRadius: 0
+  price: 30
   projectile: {fileID: 100000, guid: 4774bcd16ad8a1a49b0cec4b64912f68, type: 2}
   firePosition: {x: 0, y: 10, z: .0109902602}
   weapon: {fileID: 0}

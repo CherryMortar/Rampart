@@ -41,9 +41,9 @@ public class UnitController : AIController {
         if (Vector3.Distance(gameObject.transform.position, unitProperties.CurrentTarget.transform.position) <= unitProperties.attackRange + unitProperties.CurrentTarget.GetComponent<UnitProperties>().unitRadius)
             return;
 
-        if (animator != null && animator.GetInteger("state") != 2)
+        if (animator != null && animator.GetInteger("state") != 1)
         {
-            animator.SetInteger("state", 2);
+            animator.SetInteger("state", 1);
         }
 
         Vector3 moveDir = (path.vectorPath[currentWaypoint] - gameObject.transform.position).normalized;

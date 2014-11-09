@@ -32,7 +32,7 @@ public class SpawnersCreator : MonoBehaviour
         spawnerPrefab = Resources.Load<GameObject>("Spawner") as GameObject;
         Debug.Log("IN");
         spawnDelayForSpawners = MAX_LEVEL - level;
-        countRabitsPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
+        countRabitsPerWave = 0;
         countCavemenPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
         countHarpiesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
         countReptilesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
@@ -71,7 +71,15 @@ public class SpawnersCreator : MonoBehaviour
             AddItemsToQueueByName(enemies, REPTILE_NAME, countReptilesPerWave);
         }
 
-        var shuffledList = enemies.OrderBy((item) => Random.Range(1, 2));
+        List<GameObject> shuffledList = new List<GameObject>();
+
+        while (enemies.Count > 0)
+        {
+            int randpos = Random.Range(0, enemies.Count - 1);
+            shuffledList.Add(enemies[randpos]);
+            enemies.RemoveAt(randpos);
+        }
+
         Queue<GameObject> enemyQueue = new Queue<GameObject>(shuffledList);
         return enemyQueue;
     }

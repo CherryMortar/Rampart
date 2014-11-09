@@ -1885,7 +1885,8 @@ MonoBehaviour:
   sightRange: 10
   reloadAttackTime: 1
   moveSpeed: 10
-  currentTarget: {fileID: 0}
+  unitRadius: 0
+  price: 10
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1900,8 +1901,8 @@ MonoBehaviour:
   targetFinder: {fileID: 11400004}
   targetSearchInterval: 1
   aiActive: 1
-  mainScript: {fileID: 11400002, guid: 500eb68a0ab927248a8e7a42c0c84024, type: 2}
   unitProperties: {fileID: 11400000}
+  animator: {fileID: 9500000}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1913,6 +1914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20ab75ac61fa174caee67792f440e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTarget: {fileID: 0}
   chaseTarget: 1
 --- !u!136 &13600000
 CapsuleCollider:
