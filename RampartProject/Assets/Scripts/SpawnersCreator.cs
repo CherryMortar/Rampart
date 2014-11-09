@@ -1,27 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class SpawnersCreator : MonoBehaviour
 {
 
-    public int countRabitsPerWave;
-    public int countCavemenPerWave ;
-    public int countHarpiesPerWave ;
-    public int countReptilesPerWave ;
+    public  int level = 0;
+    private int countRabitsPerWave;
+    private int countCavemenPerWave ;
+    private int countHarpiesPerWave ;
+    private int countReptilesPerWave ;
+    private const int MAX_ENEMIES_IN_WAVE_BY_TYPE = 30;
+    private const int MAX_LEVEL = 5;
     private Queue<GameObject> enemiesInWave;
-    public string CAVEMAN_NAME = "cavemen";
-    public string RABBIT_NAME = "rabbit";
-    public string HARPY_NAME = "Harpy";
-    public string REPTILE_NAME = "reptile";
+    private string CAVEMAN_NAME = "caveman";
+    private string RABBIT_NAME = "rabbit";
+    private string HARPY_NAME = "Harpy";
+    private string REPTILE_NAME = "Reptile";
     private const string ENEMIES_FOLDER = "Enemies/";
+    
+    private string[] enemiesFileNames = new string[] { "Reptile", "caveman", "Harpy" };
     public ushort spawnersCount = 3;
-    public Vector3[] spawnersPosition;
+    private Vector3[] spawnersPosition = new Vector3[]{new Vector3(80,5,80), new Vector3(60,5,-20), new Vector3(20,5,180)};
+    
     public GameObject spawnerPrefab;
-    public float spawnDelayForSpawners = 1f;
+    private float spawnDelayForSpawners ;
     // Use this for initialization
     void Start()
     {
+        Debug.Log("IN");
+        spawnDelayForSpawners = MAX_LEVEL - level;
+        countRabitsPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
+        countCavemenPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
+        countHarpiesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
+        countReptilesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
         if (spawnersPosition.Length == spawnersCount)
         {
             enemiesInWave = CreateWave();
@@ -37,7 +50,7 @@ public class SpawnersCreator : MonoBehaviour
 
     private Queue<GameObject> CreateWave()
     {
-        Queue<GameObject> enemies = new Queue<GameObject>();
+        List<GameObject> enemies = new List<GameObject>();
         if (countCavemenPerWave > 0)
         {
             AddItemsToQueueByName(enemies, CAVEMAN_NAME, countCavemenPerWave);
@@ -54,16 +67,18 @@ public class SpawnersCreator : MonoBehaviour
         {
             AddItemsToQueueByName(enemies, REPTILE_NAME, countReptilesPerWave);
         }
-        Debug.Log(enemies.Count);
-        return enemies;
+
+        var shuffledList = enemies.OrderBy((item) => Random.Range(1, 2));
+        Queue<GameObject> enemyQueue = new Queue<GameObject>(shuffledList);
+        return enemyQueue;
     }
 
-    private void AddItemsToQueueByName(Queue<GameObject> enemies, string enemyName, int count)
+    private void AddItemsToQueueByName(List<GameObject> enemies, string enemyName, int count)
     {
         GameObject enemy = Resources.Load<GameObject>( ENEMIES_FOLDER+ enemyName) as GameObject;
         for (int i = 0; i < count; i++)
         {
-            enemies.Enqueue(enemy);
+            enemies.Add(enemy);
         }
     }
 }
