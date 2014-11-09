@@ -14,6 +14,7 @@ public class BuildScript : MonoBehaviour {
 	private GameObject inHand;
 	
 	private GUIStyle style;
+	private GUIStyle buttonStyle;
 
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
@@ -23,7 +24,8 @@ public class BuildScript : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		style = generateStyle();
+		style = buildingMenuStyle();
+		buttonStyle = buildingButtonStyle();
 	}
 	
 	public void Initialize(MainScript mainScript)
@@ -41,17 +43,17 @@ public class BuildScript : MonoBehaviour {
 	void OnGUI ()
 	{	
 		GUI.Box(new Rect(Screen.width/2 - 358/2, Screen.height - 198, 358, 198), "", style);
-		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), "Normal Tower"))
+		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), " ", buttonStyle))
 		{
 			GetTowerInHand (0);
 		}
 
-		if(GUI.Button (new Rect(Screen.width/2 + buttonWidth - 30, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), "Splash Tower")) 
+		if(GUI.Button (new Rect(Screen.width/2 + buttonWidth - 30, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), " ", buttonStyle)) 
 		{
 			GetTowerInHand (1);
 		}
 
-		if (GUI.Button (new Rect(Screen.width/2 - buttonWidth - 60, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), "Strong Tower"))
+		if (GUI.Button (new Rect(Screen.width/2 - buttonWidth - 60, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), " ", buttonStyle))
 		{
 			GetTowerInHand (2);
 		}
@@ -86,16 +88,23 @@ public class BuildScript : MonoBehaviour {
 		}
 	}
 	
-	private GUIStyle generateStyle() 
+	private GUIStyle buildingMenuStyle() 
+	{
+		GUIStyle style = new GUIStyle();
+		style.normal.background = background;
+		style.hover.background = background;
+		style.active.background = background;
+		return style;
+	}
+	
+	private GUIStyle buildingButtonStyle() 
 	{
 		GUIStyle style = new GUIStyle();
 		style.fontSize = fontSize;
 		style.normal.textColor = Color.white;
 		style.hover.textColor = Color.white;
 		style.active.textColor = Color.white;
-		style.normal.background = background;
-		style.hover.background = background;
-		style.active.background = background;
+
 		style.alignment = TextAnchor.MiddleCenter;
 		return style;
 	}

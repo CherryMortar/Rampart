@@ -18,7 +18,7 @@ public abstract class AIController : MonoBehaviour {
 	{
 	}
 	
-	void FixedUpdate () 
+	protected void FixedUpdate () 
 	{
         if (aiActive)
         {
@@ -27,9 +27,10 @@ public abstract class AIController : MonoBehaviour {
                 if (targetFinder.FindTarget(unitProperties.sightRange, unitProperties.attackRange) && targetFinder.CurrentTarget != null)
                 {
                     unitProperties.currentTarget = targetFinder.CurrentTarget;
-                    onTargetChanged();
+                    
                 }
 
+                onTargetChanged();
                 lastTargetSearch = Time.time;
             }
 

@@ -8,11 +8,9 @@ public class TowerController : AIController {
 	
 	}
 
-	void Update () 
+	void FixedUpdate () 
 	{
-        if (aiActive)
-        {
-        }
+        base.FixedUpdate();
 	}
 
     protected override void onTargetChanged()

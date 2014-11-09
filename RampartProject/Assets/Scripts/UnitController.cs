@@ -12,10 +12,13 @@ public class UnitController : AIController {
     // Use this for initialization
     void Start()
     {
+        gameObject.AddComponent<Seeker>();
     }
 
     void FixedUpdate()
     {
+        base.FixedUpdate();
+
         if (aiActive)
         {
             if (path != null)
@@ -25,8 +28,7 @@ public class UnitController : AIController {
 
     protected override void onTargetChanged()
     {
-        mainScript.pathfindingManager.FindPath(gameObject.transform.position, targetFinder.CurrentTarget.transform.position,
-            delegate(Path p)
+        gameObject.GetComponent<Seeker>().StartPath(gameObject.transform.position, targetFinder.CurrentTarget.transform.position,delegate(Path p)
             {
                 this.path = p;
                 currentWaypoint = 0;
@@ -37,6 +39,7 @@ public class UnitController : AIController {
     {
         Vector3 moveDir = (path.vectorPath[currentWaypoint] - gameObject.transform.position).normalized;
         gameObject.transform.position += moveDir * unitProperties.moveSpeed * Time.fixedDeltaTime;
+        gameObject.transform.LookAt(path.vectorPath[currentWaypoint]);
 
         if (Vector3.Distance(gameObject.transform.position, path.vectorPath[currentWaypoint]) < WAYPOINT_MIN_DISTANCE)
         {
