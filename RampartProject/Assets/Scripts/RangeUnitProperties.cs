@@ -5,6 +5,7 @@ public class RangeUnitProperties : UnitProperties {
 
     public GameObject projectile;
     public Vector3 firePosition;
+    public GameObject weapon;
 
     public override void Attack(GameObject target)
     {
