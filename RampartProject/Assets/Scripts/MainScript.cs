@@ -70,6 +70,16 @@ public class MainScript : MonoBehaviour
     public void onWaveOver()
     {
         Debug.Log("Wave over");
+
+        GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+
+        foreach (GameObject building in buildings)
+        {
+            SelectTowerScript sts = building.GetComponent<SelectTowerScript>();
+            if (sts != null)
+                sts.enabled = true;
+        }
+
         gameState = RampartGameState.BuildingPhase;
         waveHappening = false;
     }

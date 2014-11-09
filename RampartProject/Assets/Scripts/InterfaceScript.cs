@@ -26,6 +26,7 @@ public class InterfaceScript : MonoBehaviour {
 	private RampartGameState gameState;
 
 	private int tileIndex;
+    private Seeker seeker;
 
 	const int MENU_WIDTH = 358;
 	const int MENU_HEIGHT = 170;
@@ -41,6 +42,7 @@ public class InterfaceScript : MonoBehaviour {
 		style = buildingMenuStyle();
 		buttonStyle = buildingButtonStyle();
 		startWaveButtonStyle = startWaveStyle();
+        seeker = gameObject.AddComponent<Seeker>();
 	}
 	
 	public void Initialize(MainScript mainScript)
@@ -139,10 +141,23 @@ public class InterfaceScript : MonoBehaviour {
 
 			if(Input.GetMouseButtonDown(0) && tileIndex < playField.Count && playField[tileIndex].name.Contains("EmptyObject"))
 			{
-				playField[tileIndex] = PlaceTower(playFieldSpawner.GetTileBelowPoint(groundPosition));
+                mainScript.pathfindingManager.SetWalkable(tileIndex, false);
+                seeker.StartPath(new Vector3(0, 0, 0), new Vector3(mainScript.playFieldSpawner.fieldSize.x * mainScript.playFieldSpawner.tileSize.x / 2, 0, mainScript.playFieldSpawner.fieldSize.y * mainScript.playFieldSpawner.tileSize.y / 2), delegate(Pathfinding.Path p)
+                {
+                    OnPathReturned(tileIndex, groundPosition, !p.error);
+                });
+				//
 			}
 		}
 	}
+
+    void OnPathReturned(int ti, Vector3 gp, bool exists)
+    {
+        if(exists)
+            playField[tileIndex] = PlaceTower(playFieldSpawner.GetTileBelowPoint(gp));
+        else
+            mainScript.pathfindingManager.SetWalkable(ti, true);
+    }
 
     private GUIStyle loseScreenStyle()
     {

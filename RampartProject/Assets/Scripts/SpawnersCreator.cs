@@ -11,7 +11,7 @@ public class SpawnersCreator : MonoBehaviour
     private int countCavemenPerWave;
     private int countHarpiesPerWave;
     private int countReptilesPerWave;
-    private const int MAX_ENEMIES_IN_WAVE_BY_TYPE = 8;
+    private const int MAX_ENEMIES_IN_WAVE_BY_TYPE = 5;
     private const int MAX_LEVEL = 5;
     private Queue<GameObject> enemiesInWave;
     private string CAVEMAN_NAME = "caveman";
