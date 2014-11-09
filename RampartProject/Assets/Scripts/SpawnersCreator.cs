@@ -53,7 +53,7 @@ public class SpawnersCreator : MonoBehaviour
         List<GameObject> enemies = new List<GameObject>();
         if (countCavemenPerWave > 0)
         {
-            AddItemsToQueueByName(enemies, CAVEMAN_NAME, countCavemenPerWave);
+            AddItemsToQueueByName(enemies, REPTILE_NAME, countCavemenPerWave);
         }
         if (countHarpiesPerWave > 0)
         {
