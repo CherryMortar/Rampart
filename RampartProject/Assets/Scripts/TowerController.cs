@@ -8,7 +8,7 @@ public class TowerController : AIController {
 	
 	}
 
-	void FixedUpdate () 
+	new void FixedUpdate () 
 	{
         base.FixedUpdate();
 	}

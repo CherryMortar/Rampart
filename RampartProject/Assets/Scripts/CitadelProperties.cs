@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CitadelProperties : RangeUnitProperties {
-    public void CheckIsDead()
+    public new void CheckIsDead()
     {
         if (health < 0)
         {

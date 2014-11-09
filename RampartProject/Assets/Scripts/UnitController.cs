@@ -15,7 +15,7 @@ public class UnitController : AIController {
         gameObject.AddComponent<Seeker>();
     }
 
-    void FixedUpdate()
+    new void FixedUpdate()
     {
         base.FixedUpdate();
 

@@ -9,8 +9,12 @@ public class MainScript : MonoBehaviour
     public List<GameObject> playField;
     public PlayFieldSpawner playFieldSpawner;
     public PathfindingManager pathfindingManager;
-    public BuildScript buildScript;
+    public InterfaceScript buildScript;
     public TerrainGenerator terrainGenerator;
+
+    protected RampartGameState gameState = RampartGameState.Splash;
+
+    public RampartGameState GameState { get; set; }
 
     // Use this for initialization
     void Start()
@@ -37,4 +41,14 @@ public class MainScript : MonoBehaviour
     {
 
     }
+
+    public void StartWave()
+    {
+        gameState = RampartGameState.WavePhase;
+    }
+}
+
+public enum RampartGameState
+{
+    Splash, BuildingPhase, WavePhase, Loss
 }

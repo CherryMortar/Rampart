@@ -20,7 +20,7 @@ public abstract class AIController : MonoBehaviour {
 	
 	protected void FixedUpdate () 
 	{
-        if (aiActive)
+        if (aiActive && mainScript.GameState == RampartGameState.WavePhase)
         {
             if (Time.time - lastTargetSearch > targetSearchInterval)
             {

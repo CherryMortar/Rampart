@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BuildScript : MonoBehaviour {
+public class InterfaceScript : MonoBehaviour {
 
 	public int buttonWidth;
 	public int buttonHeight;
@@ -53,16 +53,18 @@ public class BuildScript : MonoBehaviour {
 	}
 
 	void OnGUI ()
-	{	
+	{
 		if(GUI.Button(new Rect(Screen.width/2 - START_WAVE_BTN_WIDTH/2, START_WAVE_BTN_HEIGHT/2, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Start wave", startWaveButtonStyle))
 		{
 			towers = GameObject.FindGameObjectsWithTag("Building");
 			foreach(GameObject tower in towers)
 			{
-				tower.GetComponent<SelectTowerScript>().enabled = false;
+                SelectTowerScript selectScript = tower.GetComponent<SelectTowerScript>();
+                if(selectScript != null)
+				    selectScript.enabled = false;
 			}
-			//start wave phase
-			enabled = false;
+            inHand = null;
+            mainScript.StartWave();
 		}
 		GUI.Box(new Rect (Screen.width / 2 - MENU_WIDTH / 2, Screen.height - MENU_HEIGHT, MENU_WIDTH, MENU_HEIGHT), "", style);
 		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
