@@ -26,7 +26,7 @@ public abstract class AIController : MonoBehaviour {
             {
                 if (targetFinder.FindTarget(unitProperties.sightRange, unitProperties.attackRange) && targetFinder.CurrentTarget != null)
                 {
-                    unitProperties.currentTarget = targetFinder.CurrentTarget;
+                    unitProperties.CurrentTarget = targetFinder.CurrentTarget;
                     
                 }
 
@@ -34,13 +34,13 @@ public abstract class AIController : MonoBehaviour {
                 lastTargetSearch = Time.time;
             }
 
-            if (unitProperties.currentTarget != null)
+            if (unitProperties.CurrentTarget != null)
             {
-                if (Vector3.Distance(gameObject.transform.position, unitProperties.currentTarget.transform.position) <= unitProperties.attackRange)
+                if (Vector3.Distance(gameObject.transform.position, unitProperties.CurrentTarget.transform.position) <= unitProperties.attackRange)
                 {
                     if (Time.time - lastAttackTime > unitProperties.reloadAttackTime)
                     {
-                        unitProperties.Attack(unitProperties.currentTarget);
+                        unitProperties.Attack(unitProperties.CurrentTarget);
                         lastAttackTime = Time.time;
                     }
                 }
