@@ -5,12 +5,12 @@ public abstract class AIController : MonoBehaviour {
 
     public TargetFinder targetFinder;
 
-    public float targetSearchInterval = 0.5f;
+    public float targetSearchInterval = 1f;
     protected float lastTargetSearch = 0;
     protected float lastAttackTime = 0;
 
-    public bool aiActive;
-    public MainScript mainScript;
+    public bool aiActive = true;
+    protected MainScript mainScript;
     public UnitProperties unitProperties;
 
 	// Use this for initialization
@@ -20,6 +20,11 @@ public abstract class AIController : MonoBehaviour {
 	
 	protected void FixedUpdate () 
 	{
+        if (mainScript == null)
+        {
+            mainScript = GameObject.Find("MainObject").GetComponent<MainScript>();
+        }
+
         if (aiActive && mainScript.GameState == RampartGameState.WavePhase)
         {
             if (Time.time - lastTargetSearch > targetSearchInterval)

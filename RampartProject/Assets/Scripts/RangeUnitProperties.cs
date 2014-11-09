@@ -17,6 +17,7 @@ public class RangeUnitProperties : UnitProperties {
         ProjectileScript projectileScript = projectileInstance.GetComponent<ProjectileScript>();
 
         projectileScript.targetObject = target;
-        projectileScript.damage = this.attack;
+        projectileScript.targetPosition = target.transform.position;
+        projectileScript.Damage = this.attack;
     }
 }

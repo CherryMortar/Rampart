@@ -28,11 +28,12 @@ public class UnitController : AIController {
 
     protected override void onTargetChanged()
     {
-        gameObject.GetComponent<Seeker>().StartPath(gameObject.transform.position, targetFinder.CurrentTarget.transform.position,delegate(Path p)
-            {
-                this.path = p;
-                currentWaypoint = 0;
-            });
+        if(targetFinder.CurrentTarget != null)
+            gameObject.GetComponent<Seeker>().StartPath(gameObject.transform.position, targetFinder.CurrentTarget.transform.position,delegate(Path p)
+                {
+                    this.path = p;
+                    currentWaypoint = 0;
+                });
     }
 
     void MoveOnPath()

@@ -6,11 +6,15 @@ public class ProjectileScript : MonoBehaviour
     public Vector3 targetPosition;
     public GameObject targetObject;
     public float speed = 10;
-    public int damage = 0;
+    protected int damage = 0;
     public float maxRange = Mathf.Infinity;
     public bool tracking = true;
+    public bool AoE = false;
+    public float AoERadius = 2;
 
     protected float passedRange = 0;
+
+    public int Damage { get { return damage; } set { damage = value; } }
 
     void Update()
     {
@@ -38,6 +42,19 @@ public class ProjectileScript : MonoBehaviour
 
     private void Explode()
     {
+        if (AoE)
+        {
+            Collider [] hitObjects = Physics.OverlapSphere(transform.position, AoERadius);
+
+            foreach(Collider collider in hitObjects)
+            {
+                if(collider.gameObject.CompareTag("Enemy"))
+                {
+                    collider.gameObject.GetComponent<UnitProperties>().TakeDamage(damage);
+                }
+            }
+        }
+
         Destroy(gameObject);
     }
 
@@ -46,7 +63,9 @@ public class ProjectileScript : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {         
             UnitProperties props = other.gameObject.GetComponent<UnitProperties>();
-            props.TakeDamage(damage);
+            if(!AoE)
+                props.TakeDamage(damage);
+
             Explode();
         }
         else if (other.gameObject.CompareTag("Terrain"))

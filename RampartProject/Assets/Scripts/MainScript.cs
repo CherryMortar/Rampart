@@ -9,12 +9,12 @@ public class MainScript : MonoBehaviour
     public List<GameObject> playField;
     public PlayFieldSpawner playFieldSpawner;
     public PathfindingManager pathfindingManager;
-    public InterfaceScript buildScript;
+    public InterfaceScript interfaceScript;
     public TerrainGenerator terrainGenerator;
 
-    protected RampartGameState gameState = RampartGameState.Splash;
+    public RampartGameState gameState = RampartGameState.Splash;
 
-    public RampartGameState GameState { get; set; }
+    public RampartGameState GameState { get { return gameState; } set { gameState = value; } }
 
     // Use this for initialization
     void Start()
@@ -24,7 +24,7 @@ public class MainScript : MonoBehaviour
         playField = playFieldSpawner.GenerateJagtangularPlayField();
         pathfindingManager.InitGraph();
 
-        buildScript.Initialize(this);
+        interfaceScript.Initialize(this);
         terrainGenerator.Initialize(this);
 
         terrainGenerator.GenerateTerrain();

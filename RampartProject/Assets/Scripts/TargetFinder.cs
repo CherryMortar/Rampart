@@ -8,7 +8,7 @@ public class TargetFinder : MonoBehaviour
     private const string HERO_TAG = "Hero";
     private const string BUILDING_TAG = "Building";
     private const string CITADEL_TAG = "Citadel";
-    private GameObject currentTarget = null;
+    public GameObject currentTarget = null;
 
     public bool chaseTarget = true;
 
