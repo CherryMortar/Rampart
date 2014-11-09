@@ -14,6 +14,7 @@ public class MeleeUnitProperties : UnitProperties
     {
         if (base.CheckIsDead())
         {
+            MainScript.money += price;
             return true;
         }
         return false;
