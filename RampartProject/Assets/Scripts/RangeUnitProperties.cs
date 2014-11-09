@@ -12,6 +12,17 @@ public class RangeUnitProperties : UnitProperties {
         FireProjectile(target);            
     }
 
+    public override void FaceTarget()
+    {
+        base.FaceTarget();
+
+        if (weapon != null)
+        {
+            Vector3 relativePos = new Vector3(currentTarget.transform.position.x, transform.position.y, currentTarget.transform.position.z) - transform.position;
+            weapon.transform.rotation = Quaternion.LookRotation(relativePos, new Vector3(0, 1, 0));
+        }
+    }
+
     private void FireProjectile(GameObject target)
     {
         GameObject projectileInstance = (GameObject)Instantiate(projectile, transform.position + firePosition, Quaternion.identity);
