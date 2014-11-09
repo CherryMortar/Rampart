@@ -245,6 +245,7 @@ MonoBehaviour:
   towerInfoTexture: {fileID: 2800000, guid: 96a6cbad2d18eae4d9638c610a58cd19, type: 3}
   upgradeButtonTexture: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff,
     type: 3}
+  upgradePrefab: {fileID: 100004, guid: 6f65bbb7af3abe548a89236697278fd4, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

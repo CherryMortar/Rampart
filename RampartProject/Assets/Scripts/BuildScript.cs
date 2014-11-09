@@ -19,6 +19,10 @@ public class BuildScript : MonoBehaviour {
 	private MainScript mainScript;
 	private PlayFieldSpawner playFieldSpawner;
 
+	const int MENU_WIDTH = 358;
+	const int MENU_HEIGHT = 198;
+	const int MARGIN_BOTTOM = 20;
+
 	public List<GameObject> towerPrefabs;
 
 	// Use this for initialization
@@ -42,18 +46,18 @@ public class BuildScript : MonoBehaviour {
 
 	void OnGUI ()
 	{	
-		GUI.Box(new Rect(Screen.width/2 - 358/2, Screen.height - 198, 358, 198), "", style);
-		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), " ", buttonStyle))
+		GUI.Box(new Rect (Screen.width / 2 - MENU_WIDTH / 2, Screen.height - MENU_HEIGHT, MENU_WIDTH, MENU_HEIGHT), "", style);
+		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
 		{
 			GetTowerInHand (0);
 		}
 
-		if(GUI.Button (new Rect(Screen.width/2 + buttonWidth - 30, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), " ", buttonStyle)) 
+		if(GUI.Button (new Rect(Screen.width/2 + buttonWidth - 30, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle)) 
 		{
 			GetTowerInHand (1);
 		}
 
-		if (GUI.Button (new Rect(Screen.width/2 - buttonWidth - 60, Screen.height - buttonHeight - 20, buttonWidth, buttonHeight), " ", buttonStyle))
+		if (GUI.Button (new Rect(Screen.width/2 - buttonWidth - 60, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
 		{
 			GetTowerInHand (2);
 		}
