@@ -8,12 +8,9 @@ public class SpawnScript : MonoBehaviour {
 	public Queue<GameObject> wave;
 	private float lastSpawnTime = 0f;
 	private GameObject lastSpawnedObject;
-	// Use this for initialization
-	void Start () {
-	
-	}
 
 	void FixedUpdate () {
+        Debug.Log("in spawn script");
 		if (lastSpawnTime + spawnDelay < Time.time && wave.Count>0) 
 		{
 			Spawn();
