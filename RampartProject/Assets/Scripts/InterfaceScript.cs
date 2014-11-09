@@ -71,6 +71,7 @@ public class InterfaceScript : MonoBehaviour {
 		case RampartGameState.BuildingPhase:
 			GUI.Label(new Rect(Screen.width - 200, Screen.height - buttonHeight, 200, 50), MainScript.money.ToString(), moneyStyle());
 			GUI.Box(new Rect(Screen.width - 260, Screen.height - buttonHeight, 50, 50), moneyIcon);
+            GUI.Label(new Rect(Screen.width / 2 - START_WAVE_BTN_WIDTH / 2, START_WAVE_BTN_HEIGHT / 2 + START_WAVE_BTN_HEIGHT*1.5f, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Build Mode", titleStyle());
 			if(GUI.Button(new Rect(Screen.width/2 - START_WAVE_BTN_WIDTH/2, START_WAVE_BTN_HEIGHT/2, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Start wave", startWaveButtonStyle))
 			{
 				towers = GameObject.FindGameObjectsWithTag("Building");
@@ -100,6 +101,7 @@ public class InterfaceScript : MonoBehaviour {
 			}
 			break;
 		case RampartGameState.WavePhase:
+            GUI.Label(new Rect(Screen.width / 2 - START_WAVE_BTN_WIDTH / 2, START_WAVE_BTN_HEIGHT / 2 + START_WAVE_BTN_HEIGHT * 1.5f, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Wave Mode", titleStyle());
 			GUI.Label(new Rect(Screen.width - 200, Screen.height - buttonHeight, 200, 50), MainScript.money.ToString(), moneyStyle());
 			GUI.Box(new Rect(Screen.width - 260, Screen.height - buttonHeight, 50, 50), moneyIcon);
 			break;
@@ -173,7 +175,7 @@ public class InterfaceScript : MonoBehaviour {
 	private GUIStyle startWaveStyle() 
 	{
 		GUIStyle style = new GUIStyle();
-		style.fontSize = fontSize;
+		style.fontSize = 40;
 		style.normal.textColor = Color.white;
 		style.hover.textColor = Color.white;
 		style.active.textColor = Color.white;
@@ -191,4 +193,14 @@ public class InterfaceScript : MonoBehaviour {
 		style.alignment = TextAnchor.MiddleLeft;
 		return style;
 	}
+
+    private GUIStyle titleStyle()
+    {
+        GUIStyle style = new GUIStyle();
+        style.fontSize = 60;
+        style.normal.textColor = Color.white;
+
+        style.alignment = TextAnchor.MiddleCenter;
+        return style;
+    }
 }
