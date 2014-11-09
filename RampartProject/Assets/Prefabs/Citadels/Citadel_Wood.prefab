@@ -428,7 +428,8 @@ MonoBehaviour:
   sightRange: 0
   reloadAttackTime: 0
   moveSpeed: 0
-  unitRadius: 5
+  unitRadius: 8
+  price: 0
   projectile: {fileID: 0}
   firePosition: {x: 0, y: 0, z: 0}
   weapon: {fileID: 0}

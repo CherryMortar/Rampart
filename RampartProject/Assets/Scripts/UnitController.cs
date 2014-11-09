@@ -4,7 +4,7 @@ using System.Collections;
 
 public class UnitController : AIController {
 
-    protected const float WAYPOINT_MIN_DISTANCE = 0.2f;
+    protected const float WAYPOINT_MIN_DISTANCE = 0.5f;
 
     protected Path path;
     protected int currentWaypoint;
