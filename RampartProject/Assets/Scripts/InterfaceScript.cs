@@ -126,7 +126,7 @@ public class InterfaceScript : MonoBehaviour {
 			tileIndex = playFieldSpawner.GetTileIndex(playFieldSpawner.GetTileBelowPoint(groundPosition));
 			inHand.transform.position = groundPosition;
 
-			if(Input.GetMouseButtonDown(0) && tileIndex < playField.Count && !playField[tileIndex].activeSelf)
+			if(Input.GetMouseButtonDown(0) && tileIndex < playField.Count && playField[tileIndex].name.Contains("EmptyObject"))
 			{
 				playField[tileIndex] = PlaceTower(playFieldSpawner.GetTileBelowPoint(groundPosition));
 			}
