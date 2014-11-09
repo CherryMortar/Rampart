@@ -27,7 +27,7 @@ public class SpawnersCreator : MonoBehaviour
     private GameObject spawnerPrefab;
     private float spawnDelayForSpawners;
 
-    public void CreateSpawners()
+    public void CreateSpawners(PlayFieldSpawner playFieldSpawner)
     {
         spawnerPrefab = Resources.Load<GameObject>("Spawner") as GameObject;
         Debug.Log("IN");
@@ -41,7 +41,8 @@ public class SpawnersCreator : MonoBehaviour
             enemiesInWave = CreateWave();
             for (uint i = 0; i < spawnersCount; i++)
             {
-                GameObject spawner = (GameObject)Instantiate(spawnerPrefab, spawnersPosition[(int)i], Quaternion.identity);
+                Vector3 position = new Vector3(4 * playFieldSpawner.tileSize.x, 0, 2 * playFieldSpawner.tileSize.y);
+                GameObject spawner = (GameObject)Instantiate(spawnerPrefab,position, Quaternion.identity);
                 SpawnScript spawnerScript = spawner.GetComponent<SpawnScript>();
                 spawnerScript.wave = enemiesInWave;
                 spawnerScript.spawnDelay = spawnDelayForSpawners;
