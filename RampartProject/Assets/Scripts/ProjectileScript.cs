@@ -3,8 +3,8 @@ using System.Collections;
 
 public class ProjectileScript : MonoBehaviour
 {
-    public Vector3 targetPosition;
-    public GameObject targetObject;
+    protected Vector3 targetPosition;
+    protected GameObject targetObject;
     public float speed = 10;
     protected int damage = 0;
     public float maxRange = Mathf.Infinity;
@@ -15,6 +15,7 @@ public class ProjectileScript : MonoBehaviour
     protected float passedRange = 0;
 
     public int Damage { get { return damage; } set { damage = value; } }
+    public GameObject TargetObject { get { return targetObject; } set { targetObject = value; targetPosition = targetObject.transform.position; } }
 
     void Update()
     {

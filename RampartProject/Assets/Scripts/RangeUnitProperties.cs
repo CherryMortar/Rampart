@@ -16,8 +16,7 @@ public class RangeUnitProperties : UnitProperties {
         GameObject projectileInstance = (GameObject)Instantiate(projectile, transform.position + firePosition, Quaternion.identity);
         ProjectileScript projectileScript = projectileInstance.GetComponent<ProjectileScript>();
 
-        projectileScript.targetObject = target;
-        projectileScript.targetPosition = target.transform.position;
+        projectileScript.TargetObject = target;
         projectileScript.Damage = this.attack;
     }
 }
