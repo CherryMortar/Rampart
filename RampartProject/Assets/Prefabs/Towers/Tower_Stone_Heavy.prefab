@@ -213,9 +213,10 @@ MonoBehaviour:
   sightRange: 200
   reloadAttackTime: 3
   moveSpeed: 0
+  unitRadius: 5
   projectile: {fileID: 100000, guid: 02dc33bcd7cd7454897b5ee11238c180, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
-  weapon: {fileID: 0}
+  weapon: {fileID: 100002}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
