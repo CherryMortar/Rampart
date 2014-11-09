@@ -6,6 +6,7 @@ public class CitadelProperties : RangeUnitProperties {
     {
         if (health < 0)
         {
+            GameObject.Find("MainObject").GetComponent<MainScript>().GameState = RampartGameState.Loss;
             Debug.Log("You are loss.");
         }
     }
