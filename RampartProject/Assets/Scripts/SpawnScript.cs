@@ -10,7 +10,7 @@ public class SpawnScript : MonoBehaviour {
 	private GameObject lastSpawnedObject;
 
 	void FixedUpdate () {
-        Debug.Log("in spawn script");
+		Debug.Log("in spawn script");
 		if (lastSpawnTime + spawnDelay < Time.time && wave.Count>0) 
 		{
 			Spawn();

@@ -6,11 +6,11 @@ using System.Linq;
 public class SpawnersCreator : MonoBehaviour
 {
 
-    public  int level = 0;
+    public int level = 0;
     private int countRabitsPerWave;
-    private int countCavemenPerWave ;
-    private int countHarpiesPerWave ;
-    private int countReptilesPerWave ;
+    private int countCavemenPerWave;
+    private int countHarpiesPerWave;
+    private int countReptilesPerWave;
     private const int MAX_ENEMIES_IN_WAVE_BY_TYPE = 30;
     private const int MAX_LEVEL = 5;
     private Queue<GameObject> enemiesInWave;
@@ -19,16 +19,17 @@ public class SpawnersCreator : MonoBehaviour
     private string HARPY_NAME = "Harpy";
     private string REPTILE_NAME = "Reptile";
     private const string ENEMIES_FOLDER = "Enemies/";
-    
+
     private string[] enemiesFileNames = new string[] { "Reptile", "caveman", "Harpy" };
     public ushort spawnersCount = 3;
-    private Vector3[] spawnersPosition = new Vector3[]{new Vector3(80,5,80), new Vector3(60,5,-20), new Vector3(20,5,180)};
-    
-    public GameObject spawnerPrefab;
-    private float spawnDelayForSpawners ;
-    // Use this for initialization
-    void Start()
+    private Vector3[] spawnersPosition = new Vector3[] { new Vector3(80, 5, 80), new Vector3(60, 5, -20), new Vector3(20, 5, 180) };
+
+    private GameObject spawnerPrefab;
+    private float spawnDelayForSpawners;
+
+    public void CreateSpawners()
     {
+        spawnerPrefab = Resources.Load<GameObject>("Spawner") as GameObject;
         Debug.Log("IN");
         spawnDelayForSpawners = MAX_LEVEL - level;
         countRabitsPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
@@ -48,12 +49,13 @@ public class SpawnersCreator : MonoBehaviour
         }
     }
 
+
     private Queue<GameObject> CreateWave()
     {
         List<GameObject> enemies = new List<GameObject>();
         if (countCavemenPerWave > 0)
         {
-            AddItemsToQueueByName(enemies, REPTILE_NAME, countCavemenPerWave);
+            AddItemsToQueueByName(enemies, CAVEMAN_NAME, countCavemenPerWave);
         }
         if (countHarpiesPerWave > 0)
         {
@@ -75,7 +77,7 @@ public class SpawnersCreator : MonoBehaviour
 
     private void AddItemsToQueueByName(List<GameObject> enemies, string enemyName, int count)
     {
-        GameObject enemy = Resources.Load<GameObject>( ENEMIES_FOLDER+ enemyName) as GameObject;
+        GameObject enemy = Resources.Load<GameObject>(ENEMIES_FOLDER + enemyName) as GameObject;
         for (int i = 0; i < count; i++)
         {
             enemies.Add(enemy);

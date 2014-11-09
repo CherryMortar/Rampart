@@ -11,6 +11,7 @@ public class MainScript : MonoBehaviour
     public PathfindingManager pathfindingManager;
     public InterfaceScript interfaceScript;
     public TerrainGenerator terrainGenerator;
+    public SpawnersCreator spawner;
 
     public RampartGameState gameState = RampartGameState.Splash;
 
@@ -45,6 +46,7 @@ public class MainScript : MonoBehaviour
     public void StartWave()
     {
         gameState = RampartGameState.WavePhase;
+        spawner = new SpawnersCreator();
     }
 }
 

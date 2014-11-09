@@ -59,12 +59,12 @@ public class InterfaceScript : MonoBehaviour {
 			towers = GameObject.FindGameObjectsWithTag("Building");
 			foreach(GameObject tower in towers)
 			{
-                SelectTowerScript selectScript = tower.GetComponent<SelectTowerScript>();
-                if(selectScript != null)
-				    selectScript.enabled = false;
+				SelectTowerScript selectScript = tower.GetComponent<SelectTowerScript>();
+				if(selectScript != null)
+					selectScript.enabled = false;
 			}
-            inHand = null;
-            mainScript.StartWave();
+			inHand = null;
+			mainScript.StartWave();
 		}
 		GUI.Box(new Rect (Screen.width / 2 - MENU_WIDTH / 2, Screen.height - MENU_HEIGHT, MENU_WIDTH, MENU_HEIGHT), "", style);
 		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
@@ -94,7 +94,7 @@ public class InterfaceScript : MonoBehaviour {
 
 		inHand = null;
 
-        return placedTower;
+		return placedTower;
 	}
 
 	void FixedUpdate()

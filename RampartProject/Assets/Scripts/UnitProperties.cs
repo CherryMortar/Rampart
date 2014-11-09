@@ -12,7 +12,7 @@ public abstract class UnitProperties : MonoBehaviour
 
 	protected GameObject currentTarget;
 
-    public GameObject CurrentTarget { get{ return currentTarget;} set{currentTarget = value;} }
+	public GameObject CurrentTarget { get{ return currentTarget;} set{currentTarget = value;} }
 
 	Animator animator;
 
@@ -22,7 +22,7 @@ public abstract class UnitProperties : MonoBehaviour
 
 	public void TakeDamage(int damage)
 	{
-        Debug.Log("taking it" + damage);
+		Debug.Log("taking it" + damage);
 		this.health -= damage;
 		CheckIsDead();
 	}
