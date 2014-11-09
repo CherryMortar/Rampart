@@ -38,7 +38,7 @@ public class UnitController : AIController {
 
     void MoveOnPath()
     {
-        if (Vector3.Distance(gameObject.transform.position, unitProperties.CurrentTarget.transform.position) <= unitProperties.attackRange + unitProperties.CurrentTarget.GetComponent<UnitProperties>().unitRadius)
+        if (unitProperties.CurrentTarget == null || Vector3.Distance(gameObject.transform.position, unitProperties.CurrentTarget.transform.position) <= unitProperties.attackRange + unitProperties.CurrentTarget.GetComponent<UnitProperties>().unitRadius)
             return;
 
         if (animator != null && animator.GetInteger("state") != 1)
