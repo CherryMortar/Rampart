@@ -11,6 +11,7 @@ public class SplashScreenScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		this.gameObject.GetComponent<BuildScript> ().enabled = false;
 	}
 	
 	void OnGUI()
@@ -19,6 +20,7 @@ public class SplashScreenScript : MonoBehaviour {
 		
 		if(GUI.Button(new Rect(0, 0, Screen.width, Screen.height), "Click to start", style()))
 		{
+			this.gameObject.GetComponent<BuildScript> ().enabled = true;
 			enabled = false;
 		}
 	}
