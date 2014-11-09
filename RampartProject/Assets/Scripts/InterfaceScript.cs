@@ -8,6 +8,7 @@ public class InterfaceScript : MonoBehaviour {
 	public int buttonHeight;
 	public int fontSize;
 	public Texture2D background;
+	public Texture2D moneyIcon;
 
 	private List<GameObject> playField;
 
@@ -69,6 +70,7 @@ public class InterfaceScript : MonoBehaviour {
 			break;
 		case RampartGameState.BuildingPhase:
 			GUI.Label(new Rect(Screen.width - 200, Screen.height - buttonHeight, 200, 50), MainScript.money.ToString(), moneyStyle());
+			GUI.Box(new Rect(Screen.width - 260, Screen.height - buttonHeight, 50, 50), moneyIcon);
 			if(GUI.Button(new Rect(Screen.width/2 - START_WAVE_BTN_WIDTH/2, START_WAVE_BTN_HEIGHT/2, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Start wave", startWaveButtonStyle))
 			{
 				towers = GameObject.FindGameObjectsWithTag("Building");
@@ -99,6 +101,7 @@ public class InterfaceScript : MonoBehaviour {
 			break;
 		case RampartGameState.WavePhase:
 			GUI.Label(new Rect(Screen.width - 200, Screen.height - buttonHeight, 200, 50), MainScript.money.ToString(), moneyStyle());
+			GUI.Box(new Rect(Screen.width - 260, Screen.height - buttonHeight, 50, 50), moneyIcon);
 			break;
 		case RampartGameState.Loss:
             GUI.Label(new Rect(Screen.width / 2 - 200, Screen.height / 2 - 50, 400, 100), "YOU LOSE!!!", loseScreenStyle());

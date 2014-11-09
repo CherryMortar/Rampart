@@ -166,6 +166,8 @@ GameObject:
   - 4: {fileID: 400020}
   - 95: {fileID: 9500000}
   - 114: {fileID: 11400000}
+  - 65: {fileID: 6500000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Citadel_Wood
   m_TagString: Citadel
@@ -396,6 +398,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_Mesh: {fileID: 4300002, guid: 425048beee9f9754d8de28e2d7a32536, type: 3}
+--- !u!65 &6500000
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .200000003, y: .200000003, z: .200000003}
+  m_Center: {x: -.100000001, y: .100000001, z: 0}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -429,9 +443,25 @@ MonoBehaviour:
   reloadAttackTime: 0
   moveSpeed: 0
   unitRadius: 5
+  price: 0
   projectile: {fileID: 0}
   firePosition: {x: 0, y: 0, z: 0}
   weapon: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf8275fb02e90e47b278f606e4c1c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerInfoTexture: {fileID: 2800000, guid: 81c90ccfdc6bf4342a712c7f388305d5, type: 3}
+  upgradeButtonTexture: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff,
+    type: 3}
+  upgradePrefab: {fileID: 100028, guid: a61187539890b224e93efbf7345ed0b8, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

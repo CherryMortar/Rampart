@@ -226,9 +226,11 @@ GameObject:
   - 4: {fileID: 400028}
   - 95: {fileID: 9500000}
   - 114: {fileID: 11400000}
+  - 65: {fileID: 6500000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Citadel_Stone
-  m_TagString: Citadel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,7 +417,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.10344172, y: 0, z: -15.3770437}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 400026}
@@ -439,7 +441,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 95735de194910d640833335ef0244075, type: 2}
+  - {fileID: 2100000, guid: f323e13c0240afe48ac031dc709ad583, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -459,7 +461,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 95735de194910d640833335ef0244075, type: 2}
+  - {fileID: 2100000, guid: f323e13c0240afe48ac031dc709ad583, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -479,7 +481,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 95735de194910d640833335ef0244075, type: 2}
+  - {fileID: 2100000, guid: f323e13c0240afe48ac031dc709ad583, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -508,6 +510,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_Mesh: {fileID: 4300002, guid: fac70257e922d424e803ac7b5e5c1efe, type: 3}
+--- !u!65 &6500000
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .200000003, y: .200000003, z: .200000003}
+  m_Center: {x: 0, y: .100000001, z: 0}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -540,10 +554,26 @@ MonoBehaviour:
   sightRange: 0
   reloadAttackTime: 0
   moveSpeed: 0
-  unitRadius: 5
+  unitRadius: 10
+  price: 5000
   projectile: {fileID: 0}
   firePosition: {x: 0, y: 0, z: 0}
   weapon: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf8275fb02e90e47b278f606e4c1c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerInfoTexture: {fileID: 2800000, guid: c3e1a512ae1a8a1479f8b8d564639443, type: 3}
+  upgradeButtonTexture: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff,
+    type: 3}
+  upgradePrefab: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
