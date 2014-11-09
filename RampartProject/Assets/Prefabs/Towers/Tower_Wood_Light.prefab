@@ -109,9 +109,9 @@ MonoBehaviour:
   sightRange: 100
   reloadAttackTime: 2
   moveSpeed: 0
-  currentTarget: {fileID: 0}
   projectile: {fileID: 100000, guid: 7922c79314129b245af202f758fc17ff, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
+  weapon: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20ab75ac61fa174caee67792f440e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTarget: {fileID: 0}
   chaseTarget: 1
 --- !u!114 &11400004
 MonoBehaviour:
@@ -138,7 +139,6 @@ MonoBehaviour:
   targetFinder: {fileID: 11400002}
   targetSearchInterval: 1
   aiActive: 1
-  mainScript: {fileID: 11400002, guid: 500eb68a0ab927248a8e7a42c0c84024, type: 2}
   unitProperties: {fileID: 11400000}
 --- !u!114 &11400006
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   towerInfoTexture: {fileID: 2800000, guid: d6c218b37bb2a6a41bf950fd8b49a9f1, type: 3}
   upgradeButtonTexture: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff,
     type: 3}
-  upgradePrefab: {fileID: 100000, guid: 6a9988adf3357f242be9ec3f198327d7, type: 2}
+  upgradePrefab: {fileID: 100020, guid: 0e78256d5c352054e8d117d1a9653e25, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
