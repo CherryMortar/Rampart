@@ -1652,13 +1652,14 @@ MonoBehaviour:
   attack: 10
   attackRange: 120
   sightRange: 120
-  reloadAttackTime: 1
+  reloadAttackTime: .300000012
   moveSpeed: 0
   unitRadius: 5
   price: 100
   projectile: {fileID: 100000, guid: 7922c79314129b245af202f758fc17ff, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
-  weapon: {fileID: 0}
+  weapon: {fileID: 100052}
+  bonusRotation: 270
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1670,10 +1671,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ad5f8f6c7e75041903edaeb0d02da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFinder: {fileID: 0}
+  targetFinder: {fileID: 11400000}
   targetSearchInterval: 1
   aiActive: 1
-  unitProperties: {fileID: 0}
+  unitProperties: {fileID: 11400002}
   animator: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:

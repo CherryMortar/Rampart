@@ -6,12 +6,12 @@ using System.Linq;
 public class SpawnersCreator : MonoBehaviour
 {
 
-    public int level = 0;
+    public int level = 1;
     private int countRabitsPerWave;
     private int countCavemenPerWave;
     private int countHarpiesPerWave;
     private int countReptilesPerWave;
-    private const int MAX_ENEMIES_IN_WAVE_BY_TYPE = 30;
+    private const int MAX_ENEMIES_IN_WAVE_BY_TYPE = 8;
     private const int MAX_LEVEL = 5;
     private Queue<GameObject> enemiesInWave;
     private string CAVEMAN_NAME = "caveman";
@@ -27,19 +27,29 @@ public class SpawnersCreator : MonoBehaviour
     private GameObject spawnerPrefab;
     private float spawnDelayForSpawners;
 
-    public void CreateSpawners(PlayFieldSpawner playFieldSpawner)
+    public void CreateSpawners(PlayFieldSpawner playFieldSpawner, onSpawnOverDelegate onSpawnOver)
     {
         spawnerPrefab = Resources.Load<GameObject>("Spawner") as GameObject;
-        Debug.Log("IN");
+
         spawnDelayForSpawners = MAX_LEVEL - level;
         countRabitsPerWave = 0;
-        countCavemenPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
-        countHarpiesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
-        countReptilesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE);
+        countCavemenPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE * level);
+        countHarpiesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE * level);
+        countReptilesPerWave = Random.Range(0, MAX_ENEMIES_IN_WAVE_BY_TYPE * level);
         if (spawnersPosition.Length == spawnersCount)
         {
             enemiesInWave = CreateWave();
-            for (uint i = 0; i < spawnersCount; i++)
+
+            {
+                Vector3 position = new Vector3(4 * playFieldSpawner.tileSize.x, 0, 2 * playFieldSpawner.tileSize.y);
+                GameObject spawner = (GameObject)Instantiate(spawnerPrefab, spawnersPosition[0], Quaternion.identity);
+                SpawnScript spawnerScript = spawner.GetComponent<SpawnScript>();
+                spawnerScript.onSpawnOver = onSpawnOver;
+                spawnerScript.wave = enemiesInWave;
+                spawnerScript.spawnDelay = spawnDelayForSpawners;
+            }
+
+            for (uint i = 1; i < spawnersCount; i++)
             {
                 Vector3 position = new Vector3(4 * playFieldSpawner.tileSize.x, 0, 2 * playFieldSpawner.tileSize.y);
                 GameObject spawner = (GameObject)Instantiate(spawnerPrefab, spawnersPosition[i], Quaternion.identity);
@@ -48,6 +58,8 @@ public class SpawnersCreator : MonoBehaviour
                 spawnerScript.spawnDelay = spawnDelayForSpawners;
             }
         }
+
+        level++;
     }
 
 

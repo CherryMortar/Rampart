@@ -11,6 +11,7 @@ public class ProjectileScript : MonoBehaviour
     public bool tracking = true;
     public bool AoE = false;
     public float AoERadius = 2;
+    public GameObject impactEffect;
 
     protected float passedRange = 0;
 
@@ -50,6 +51,12 @@ public class ProjectileScript : MonoBehaviour
                     collider.gameObject.GetComponent<UnitProperties>().TakeDamage(damage);
                 }
             }
+        }
+
+        if (impactEffect != null)
+        {
+            impactEffect.GetComponent<ParticleSystem>().playbackSpeed = 11;
+            Instantiate(impactEffect, gameObject.transform.position, Quaternion.identity);
         }
 
         Destroy(gameObject);

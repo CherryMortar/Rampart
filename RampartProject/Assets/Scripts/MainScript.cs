@@ -20,6 +20,8 @@ public class MainScript : MonoBehaviour
     
     public static int money;
 
+    protected bool waveHappening = false;
+
     // Use this for initialization
     void Start()
     {
@@ -46,16 +48,30 @@ public class MainScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        if (waveHappening && GameObject.FindGameObjectWithTag("Enemy") == null)
+            onWaveOver();
     }
 
     public void StartWave()
     {
         gameState = RampartGameState.WavePhase;
         SpawnersCreator spawner = gameObject.AddComponent<SpawnersCreator>();
-        spawner.CreateSpawners(playFieldSpawner);
+        spawner.CreateSpawners(playFieldSpawner, onSpawnOver);
+    }
+
+    public void onSpawnOver()
+    {
+        Debug.Log("Spawn over");
+        waveHappening = true;
+    }
+
+    public void onWaveOver()
+    {
+        Debug.Log("Wave over");
+        gameState = RampartGameState.BuildingPhase;
+        waveHappening = false;
     }
 }
 
