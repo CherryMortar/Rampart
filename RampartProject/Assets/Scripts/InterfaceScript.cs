@@ -28,7 +28,7 @@ public class InterfaceScript : MonoBehaviour {
 	private int tileIndex;
 
 	const int MENU_WIDTH = 358;
-	const int MENU_HEIGHT = 198;
+	const int MENU_HEIGHT = 170;
 	const int MARGIN_BOTTOM = 20;
 	const int START_WAVE_BTN_WIDTH = 200;
 	const int START_WAVE_BTN_HEIGHT = 30;
