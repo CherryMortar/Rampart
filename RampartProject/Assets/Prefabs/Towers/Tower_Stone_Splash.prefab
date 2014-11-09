@@ -46,6 +46,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: Tower_Stone_Splash
   m_TagString: Building
@@ -183,7 +184,6 @@ MonoBehaviour:
   targetFinder: {fileID: 11400004}
   targetSearchInterval: 1
   aiActive: 1
-  mainScript: {fileID: 11400002, guid: 500eb68a0ab927248a8e7a42c0c84024, type: 2}
   unitProperties: {fileID: 11400002}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -202,9 +202,9 @@ MonoBehaviour:
   sightRange: 170
   reloadAttackTime: 3
   moveSpeed: 0
-  currentTarget: {fileID: 0}
   projectile: {fileID: 100000, guid: 4774bcd16ad8a1a49b0cec4b64912f68, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
+  weapon: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,7 +216,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20ab75ac61fa174caee67792f440e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTarget: {fileID: 0}
   chaseTarget: 1
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf8275fb02e90e47b278f606e4c1c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerInfoTexture: {fileID: 2800000, guid: 9b25a06f3572e084c8f9aa825140cb97, type: 3}
+  upgradeButtonTexture: {fileID: 2800000, guid: 509897715767caf4880d3932975ed3ff,
+    type: 3}
+  upgradePrefab: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
