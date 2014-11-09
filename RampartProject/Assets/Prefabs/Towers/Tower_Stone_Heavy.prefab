@@ -216,10 +216,10 @@ MonoBehaviour:
   moveSpeed: 0
   unitRadius: 5
   price: 110
-  projectile: {fileID: 100000, guid: 02dc33bcd7cd7454897b5ee11238c180, type: 2}
+  projectile: {fileID: 100000, guid: cc48411ac0be0c5419f07ee8e0f2ab41, type: 2}
   firePosition: {x: 0, y: 12.5, z: 0}
   weapon: {fileID: 100002}
-  bonusRotation: 0
+  bonusRotation: 270
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

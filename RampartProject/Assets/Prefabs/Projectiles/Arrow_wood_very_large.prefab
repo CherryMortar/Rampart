@@ -15,7 +15,7 @@ GameObject:
   - 136: {fileID: 13600000}
   - 54: {fileID: 5400000}
   m_Layer: 0
-  m_Name: Arrow_wood_small
+  m_Name: Arrow_wood_very_large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: .878835499, y: 0, z: 0}
-  m_LocalScale: {x: .129999995, y: .129999995, z: .109999999}
+  m_LocalPosition: {x: 73.4515076, y: 15.3392153, z: 36.393589}
+  m_LocalScale: {x: .209999993, y: .209999993, z: .400000006}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ed424a94430ea40a1553363f6a98d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 35
+  speed: 45
   maxRange: Infinity
   tracking: 1
   AoE: 0
@@ -116,10 +116,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2
-  m_Height: 23
+  m_Radius: 1
+  m_Height: 42
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: .0441889763}
+  m_Center: {x: 0, y: 0, z: .04418898}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

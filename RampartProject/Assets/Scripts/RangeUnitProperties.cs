@@ -21,14 +21,14 @@ public class RangeUnitProperties : UnitProperties {
     {
         base.FaceTarget();
 
-        if (!weaponInitialRotaionSet)
-        {
-            weaponInitialRotation = weapon.transform.rotation;
-            weaponInitialRotaionSet = true;
-        }
-
         if (weapon != null)
         {
+            if (!weaponInitialRotaionSet)
+            {
+                weaponInitialRotation = weapon.transform.rotation;
+                weaponInitialRotaionSet = true;
+            }
+
             Vector3 relativePos = transform.position - new Vector3(currentTarget.transform.position.x, transform.position.y, currentTarget.transform.position.z);
             weapon.transform.rotation = weaponInitialRotation * Quaternion.AngleAxis(bonusRotation, new Vector3(0, 1, 0)) * Quaternion.LookRotation(relativePos, new Vector3(0, 1, 0));
         }
@@ -36,6 +36,7 @@ public class RangeUnitProperties : UnitProperties {
 
     private void FireProjectile(GameObject target)
     {
+        Debug.Log("fir");
         GameObject projectileInstance = (GameObject)Instantiate(projectile, transform.position + firePosition, Quaternion.identity);
         ProjectileScript projectileScript = projectileInstance.GetComponent<ProjectileScript>();
 
