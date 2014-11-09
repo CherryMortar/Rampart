@@ -22,7 +22,7 @@ public class SpawnersCreator : MonoBehaviour
 
     private string[] enemiesFileNames = new string[] { "Reptile", "caveman", "Harpy" };
     public ushort spawnersCount = 3;
-    private Vector3[] spawnersPosition = new Vector3[] { new Vector3(80, 5, 80), new Vector3(60, 5, -20), new Vector3(20, 5, 180) };
+    private Vector3[] spawnersPosition = new Vector3[] { new Vector3(10, 5, 80), new Vector3(60, 5, 10), new Vector3(20, 5, 180) };
 
     private GameObject spawnerPrefab;
     private float spawnDelayForSpawners;
