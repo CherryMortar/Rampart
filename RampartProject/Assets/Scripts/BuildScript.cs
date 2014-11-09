@@ -12,9 +12,11 @@ public class BuildScript : MonoBehaviour {
 	private List<GameObject> playField;
 
 	private GameObject inHand;
+	private GameObject[] towers;
 	
 	private GUIStyle style;
 	private GUIStyle buttonStyle;
+	private GUIStyle startWaveButtonStyle;
 	private Color color;
 
 	private MainScript mainScript;
@@ -25,6 +27,8 @@ public class BuildScript : MonoBehaviour {
 	const int MENU_WIDTH = 358;
 	const int MENU_HEIGHT = 198;
 	const int MARGIN_BOTTOM = 20;
+	const int START_WAVE_BTN_WIDTH = 200;
+	const int START_WAVE_BTN_HEIGHT = 30;
 
 	public List<GameObject> towerPrefabs;
 
@@ -33,6 +37,7 @@ public class BuildScript : MonoBehaviour {
 	{
 		style = buildingMenuStyle();
 		buttonStyle = buildingButtonStyle();
+		startWaveButtonStyle = startWaveStyle();
 	}
 	
 	public void Initialize(MainScript mainScript)
@@ -49,6 +54,16 @@ public class BuildScript : MonoBehaviour {
 
 	void OnGUI ()
 	{	
+		if(GUI.Button(new Rect(Screen.width/2 - START_WAVE_BTN_WIDTH/2, START_WAVE_BTN_HEIGHT/2, START_WAVE_BTN_WIDTH, START_WAVE_BTN_HEIGHT), "Start wave", startWaveButtonStyle))
+		{
+			towers = GameObject.FindGameObjectsWithTag("Building");
+			foreach(GameObject tower in towers)
+			{
+				tower.GetComponent<SelectTowerScript>().enabled = false;
+			}
+			//start wave phase
+			enabled = false;
+		}
 		GUI.Box(new Rect (Screen.width / 2 - MENU_WIDTH / 2, Screen.height - MENU_HEIGHT, MENU_WIDTH, MENU_HEIGHT), "", style);
 		if(GUI.Button (new Rect(Screen.width/2 - buttonWidth / 2, Screen.height - buttonHeight - MARGIN_BOTTOM, buttonWidth, buttonHeight), " ", buttonStyle))
 		{
@@ -107,11 +122,22 @@ public class BuildScript : MonoBehaviour {
 	private GUIStyle buildingButtonStyle() 
 	{
 		GUIStyle style = new GUIStyle();
-		style.fontSize = fontSize;
 		style.normal.textColor = Color.white;
 		style.hover.textColor = Color.white;
 		style.active.textColor = Color.white;
 
+		style.alignment = TextAnchor.MiddleCenter;
+		return style;
+	}
+
+	private GUIStyle startWaveStyle() 
+	{
+		GUIStyle style = new GUIStyle();
+		style.fontSize = fontSize;
+		style.normal.textColor = Color.white;
+		style.hover.textColor = Color.white;
+		style.active.textColor = Color.white;
+			
 		style.alignment = TextAnchor.MiddleCenter;
 		return style;
 	}
