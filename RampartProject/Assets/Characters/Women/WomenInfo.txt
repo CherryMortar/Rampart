@@ -1,6 +1,0 @@
-00 - 05 T-Pose
-10 - 39 Running
-45 - 99 Attack
-105 - 294 Idle 
-300 - 344 Defeat
-

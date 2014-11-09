@@ -1,4 +1,0 @@
-00 - 05 T-Pose
-10 - 29 Running with Gun
-35 - 46 Shooting with gun
-50 - 84 Dying

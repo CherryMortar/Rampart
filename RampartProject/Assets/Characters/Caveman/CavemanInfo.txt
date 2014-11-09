@@ -1,4 +1,0 @@
-00 - 05 T-Pose
-10 - 35 Running with bat
-40 - 57 Striking with bat
-60 - 95 Dying
