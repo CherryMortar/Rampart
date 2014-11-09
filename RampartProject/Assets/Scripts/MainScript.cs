@@ -46,7 +46,7 @@ public class MainScript : MonoBehaviour
     {
         gameState = RampartGameState.WavePhase;
         SpawnersCreator spawner = new SpawnersCreator();
-        spawner.CreateSpawners();
+        spawner.CreateSpawners(playFieldSpawner);
     }
 }
 
