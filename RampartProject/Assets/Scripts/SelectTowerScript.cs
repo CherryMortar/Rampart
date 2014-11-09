@@ -37,8 +37,12 @@ public class SelectTowerScript : MonoBehaviour {
 			{
 				if(GUI.Button(new Rect(110, Screen.height - 52, 100, 25), "Upgrade", upgradeButtonStyle()))
 				{
-					Instantiate(upgradePrefab, gameObject.transform.position, Quaternion.identity);
-					Destroy(gameObject);
+					if(MainScript.money >= upgradePrefab.GetComponent<UnitProperties>().price)
+					{
+						MainScript.money -= upgradePrefab.GetComponent<UnitProperties>().price;
+						Instantiate(upgradePrefab, gameObject.transform.position, Quaternion.identity);
+						Destroy(gameObject);
+					}
 				}
 			}
 		}
