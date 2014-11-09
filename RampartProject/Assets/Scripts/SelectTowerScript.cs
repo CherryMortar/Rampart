@@ -34,8 +34,8 @@ public class SelectTowerScript : MonoBehaviour {
 			GUI.Box(new Rect (0, Screen.height - INFO_MENU_HEIGHT, INFO_MENU_WIDTH, INFO_MENU_HEIGHT), "", style);
 			if(GUI.Button(new Rect(110, Screen.height - 52, 100, 25), "Upgrade", upgradeButtonStyle()))
 			{
-				Instantiate(upgradePrefab, this.transform.position, Quaternion.identity);
-				Destroy(this);
+				Instantiate(upgradePrefab, gameObject.transform.position, Quaternion.identity);
+				Destroy(gameObject);
 			}
 		}
 	}

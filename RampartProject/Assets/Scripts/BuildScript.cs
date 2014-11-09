@@ -81,16 +81,18 @@ public class BuildScript : MonoBehaviour {
 		}
 	}
 
-	void PlaceTower (Vector2 tile)
+	GameObject PlaceTower (Vector2 tile)
 	{
 		Vector3 pos = playFieldSpawner.GetTileCenter(tile);
 
-		Instantiate(inHand, pos, Quaternion.identity);
+		GameObject placedTower = (GameObject)Instantiate(inHand, pos, Quaternion.identity);
 		mainScript.pathfindingManager.SetWalkable(tile, false);
 
 		Destroy(inHand);
 
 		inHand = null;
+
+        return placedTower;
 	}
 
 	void FixedUpdate()
@@ -100,12 +102,14 @@ public class BuildScript : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			float distance = ray.origin.y / (-ray.direction.y);
 			Vector3 point = ray.GetPoint (distance);
-			Vector3 snapPosition = new Vector3 (point.x, 0, point.z);
-			tileIndex = playFieldSpawner.GetTileIndex(playFieldSpawner.GetTileBelowPoint(snapPosition));
-			inHand.transform.position = snapPosition;
-			if(Input.GetMouseButtonDown(0) && tileIndex < playField.Count && playField[tileIndex].activeSelf)
+			Vector3 groundPosition = new Vector3 (point.x, 0, point.z);
+
+			tileIndex = playFieldSpawner.GetTileIndex(playFieldSpawner.GetTileBelowPoint(groundPosition));
+			inHand.transform.position = groundPosition;
+
+			if(Input.GetMouseButtonDown(0) && tileIndex < playField.Count && !playField[tileIndex].activeSelf)
 			{
-				PlaceTower(playFieldSpawner.GetTileBelowPoint(snapPosition));
+				playField[tileIndex] = PlaceTower(playFieldSpawner.GetTileBelowPoint(groundPosition));
 			}
 		}
 	}
