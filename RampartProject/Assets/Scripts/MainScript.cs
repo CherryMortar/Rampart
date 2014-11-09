@@ -17,6 +17,8 @@ public class MainScript : MonoBehaviour
     public RampartGameState gameState = RampartGameState.Splash;
 
     public RampartGameState GameState { get { return gameState; } set { gameState = value; } }
+    
+    public int money;
 
     // Use this for initialization
     void Start()
@@ -26,6 +28,7 @@ public class MainScript : MonoBehaviour
         playField = playFieldSpawner.GenerateJagtangularPlayField();
         pathfindingManager.InitGraph();
 
+		money = 0;
         interfaceScript.Initialize(this);
         terrainGenerator.Initialize(this);
 
@@ -36,7 +39,6 @@ public class MainScript : MonoBehaviour
             if(!playField[i].activeSelf)
                 pathfindingManager.SetWalkable(i, false);
         }
-
         Vector3 pos = playFieldSpawner.GetTileCenter(new Vector2(playFieldSpawner.fieldSize.x / 2, playFieldSpawner.fieldSize.y / 2));
 
         playField[playField.Count/2] = (GameObject)Instantiate(citadel, pos, Quaternion.identity);
