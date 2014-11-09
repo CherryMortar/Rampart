@@ -2489,6 +2489,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 400330}
   - 95: {fileID: 9500000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
+  - 136: {fileID: 13600000}
   m_Layer: 0
   m_Name: WomanHero
   m_TagString: Untagged
@@ -4645,7 +4649,7 @@ Transform:
   m_GameObject: {fileID: 100330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 55, y: 40, z: 55}
   m_Children:
   - {fileID: 400328}
   - {fileID: 400326}
@@ -4695,6 +4699,65 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0194d68d631bedc4ea1b2908f0c2630a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetFinder: {fileID: 11400004}
+  targetSearchInterval: 1
+  aiActive: 0
+  mainScript: {fileID: 11400002, guid: 500eb68a0ab927248a8e7a42c0c84024, type: 2}
+  unitProperties: {fileID: 11400002}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c32904d3d5aca74e9f0be3a2758f020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  attack: 50
+  attackRange: 1
+  sightRange: 15
+  reloadAttackTime: 1
+  moveSpeed: 15
+  currentTarget: {fileID: 0}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ab75ac61fa174caee67792f440e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseTarget: 1
+--- !u!136 &13600000
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .0500000007
+  m_Height: .00999999978
+  m_Direction: 0
+  m_Center: {x: 0, y: .0599999987, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
